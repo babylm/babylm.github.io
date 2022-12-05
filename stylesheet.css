@@ -117,19 +117,3 @@ hr {
   width: 45%;
   padding: 5px;
 }
-
-figure {
-  border: 1px #cccccc solid;
-  padding: 10px;
-  margin: auto;
-}
-figure img {
-    vertical-align: top;
-}
-figure figcaption {
-  background-color: white;
-  color: black;
-  font-style: italic;
-  padding: 2px;
-  text-align: center;
-}
