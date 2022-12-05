@@ -123,8 +123,10 @@ figure {
   padding: 10px;
   margin: auto;
 }
-
-figcaption {
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
   background-color: white;
   color: black;
   font-style: italic;
