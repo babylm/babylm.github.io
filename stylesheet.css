@@ -1,0 +1,120 @@
+
+body {
+	margin: 0 auto;
+	width: 900px;
+	padding: 40px;
+	font-size: 14px;
+  	font-family: sans-serif;
+  	line-height: 1.5;
+  font-size: 16px;
+  color: #444444;
+}
+
+@font-face {
+  font-style: normal;
+  size: 14px;
+}
+
+.greybox{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom:10px;
+  background-color: #e0e0e0;
+  border-radius: 10px
+}
+
+.subheader{
+  color: grey;
+  font-weight: bold;
+}
+
+
+.people{
+ column-count: 3; 
+ padding-top: 20px;
+ font-weight: bold;
+ color: grey;
+}
+
+.master-title{
+  font-size: 40px;
+  color: #0066ff;
+  font-weight: bold;
+}
+
+.paragraph {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.bullet{
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.title{
+  padding-top: 20px;
+  font-size: 20px;
+  color: #0066ff;
+  font-weight: bold;
+  border-bottom: 2px dotted grey;
+}
+
+a:link {
+  color: #0066ff;
+  text-decoration: none;
+}
+
+a:visited {
+	color: #0066ff;
+}
+
+a:hover {
+  color: #cc66ff;
+}
+
+#navbar {
+  font-size: 20px;
+}
+
+#title {
+  font-size: 30px;
+  color: #0066ff;
+  font-weight: bold; 
+}
+
+#row-title {
+  font-size: 20px;
+  color: #0066ff;
+  font-weight: bold; 
+
+}
+
+.footer{
+  padding-top: 20px;
+  color: grey;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#headshot {
+  float:left;
+  padding-right: 6px;
+}
+
+hr {
+	border-top: 1px solid gray;
+}
+
+.column {
+  float: left;
+  width: 45%;
+  padding: 5px;
+}
+
