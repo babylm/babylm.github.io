@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+  <meta name="google-site-verification" content="uGXw8B5MkU92VZio-qMGqDxvDPk9t5WuvJPCuMmwuA8"/>
+  <link rel="icon" href="./images/pacifier.png">
+</head>
+
+<body>
+
+
+<div style="display:inline">
+ <img style="float: left; padding-right: 20px;" src="./images/pacifier.png" height="80"> 
+ <div class="master-title"> <b>Baby</b>LM Challenge </div> 
+ <div class="subheader"> Sample-efficient pretraining on a developmentally plausible corpus </div> 
+</div>
+
+
+<div id="navbar">
+<h4> <a href="index.html"> Overview </a> • <a href="guidelines.html"> Guidelines </a> • <a href="timeline.html"> Timeline </a> • <a href="faqs.html"> FAQs </a> <hr> </h4> 
+</div>
+
+<div class="greybox">
+
+<div class="paragraph"> <b> Summary: </b> This shared task challenges community members to train a language model <b>from scratch</b> on the same amount of linguistic data available to a child. Submissions should be implemented in Huggingface's Transformers library and will be evaluated on a shared pipeline. This shared task is co-sponsored by <a href="https://cmclorg.github.io/">CMCL</a> and <a href="https://www.conll.org/">CoNLL</a>. </div>
+
+<div class="bullet"> • <a href="https://github.com/babylm/babylm.github.io/raw/main/babylm_data.zip"; download="download">Download Dataset (700MB unzipped)</a></div>
+<div class="bullet"> • Evaluate your model using our <a href="https://github.com/babylm/evaluation-pipeline">evaluation pipeline</a> </div>
+<div class="bullet"> • Models and results due <b> <s>July 15, 2023</s> July 22, 2023, 23:59 anywhere on earth (UTC-12)</b>. Submit on <a href="https://dynabench.org/babylm">dynabench</a>.</div>
+<div class="bullet"> • Paper submission due <b> <s>August 1, 2023</s> August 2, 2023, 23:59 anywhere on earth (UTC-12)</b>. Submit on <a href="https://openreview.net/group?id=EMNLP/2023/Workshop/CoNLL-CMCL_Shared_Task/BabyLM_Challenge">OpenReview</a>.</div>
+
+<div class="paragraph"> See the <a href="guidelines.html">guidelines</a> for an overview of submission tracks and pretraining data. See the <a href="https://arxiv.org/abs/2301.11796">call for papers</a> for a detailed description of the task setup and data. </div>
+
+<div class="paragraph"> Consider <a href="https://join.slack.com/t/babylmchallenge/shared_invite/zt-1s8el4mro-qvVO447l3POBZcUNvMWQcg">joining the BabyLM Slack</a> if you have any questions for the organizers or want to connect with other participants!</div>
+
+<div class="paragraph"> Feedback? Ideas for next year? Please <a href="https://forms.gle/1r5yZPC12fzHmn3v5"> fill out our survey</a>.</div>
+
+</div>
+
+
+
+<div class="title"> Overview </div>
+  
+    <img style="float: right; padding-left: 20px; padding-bottom: 15px;" src="./images/model_sizes.png" height="160"> 
+
+<div class="paragraph"> Huge effort has been put into optimizing LM pretraining at massive scales in the last several years. While growing parameter counts often get the most attention, datasets have also grown by orders of magnitude. For example, <a href="https://arxiv.org/abs/2203.15556v1"> Chinchilla </a> sees 1.4 <b>trillion</b> words during training---well over 10000 words for every one word a 13 year old child has heard in their entire life.</div>
+
+<div class="paragraph"> The goal of this shared task is to incentivize researchers with an interest in pretraining or cognitive modeling to focus their efforts on optimizing pretraining given data limitations inspired by human development.<br>
+  Additionally, we hope to democratize research on pretraining—which is typically thought to be practical only for large industry groups—by drawing attention to open problems that can be addressed on a university budget. </div>
+
+<div class="title" > Why <100 Million Words? </div>
+  
+<div class="paragraph"> Focusing on scaled down pretraining has several potential benefits: <br>
+  First, small scale pretraining can be a sandbox for developing novel techniques for improving data efficiency. These techniques have the potential to then scale up to larger scales commonly seen in applied NLP or used to enhance current approaches to modeling low-resource languages. <br>
+  Second, improving our ability to train LMs on the same kinds and quantities of data that humans learn from hopefully will give us greater access to plausible cognitive models of humans and help us understand what allows humans to acquire language so efficiently. </div>
+
+<div class="title"> Organization Team </div>
+
+<div class = "people">
+
+<div class="bullet">• Leshem Choshen </div> 
+<div class="bullet">• Ryan Cotterell </div> 
+<div class="bullet">• Kundan Krishna </div> 
+<div class="bullet">• Tal Linzen </div>
+<div class="bullet">• Haokun Liu </div> 
+<div class="bullet">• Aaron Mueller </div> 
+<div class="bullet">• Alex Warstadt </div> 
+<div class="bullet">• Ethan Wilcox </div> 
+<div class="bullet">• Adina Williams </div> 
+<div class="bullet">• Chengxu Zhuang </div> 
+
+</div>
+
+</div>
+
+<div class="paragraph"> Submissions should be implimented in Huggingface's Transformers library and can be submitted along one of three submission tracks. The data has been released and can be downloaded <a href="https://github.com/babylm/babylm.github.io/raw/main/babylm_data.zip"; download="download">here</a>. </div>
+
+<div class="title"> Submission Tracks </div>
+
+<div class="paragraph"> We will evaluate models in three cateogries: <b> strict </b>, <b> strict-small </b> and <b> loose </b>. </div>
+
+<div class="bullet"> <b> • Strict </b> and <b> Strict-Small: </b> The strict and strict-small tracks require that submissions are trained exclusively on a fixed dataset. The only difference between these tracks is the size of the dataset (~10M words vs. ~100M words). Winners will be determined based on performance on a shared evaluation set consisting of syntactic evaluation and NLU tasks. </div>
+
+<div class="bullet"> <b> • Loose: </b> Submissions are still limited to ~100M words or less of training data, and will be tested on the shared evaluation set. However, they are permitted to use unlimited non-linguistic data. Additionally, training on additional text is allowed without limits if that text is generated by a model trained following the above restrictions. Winners will be selected holistically based on evaluation performance, relevance to the shared task goals, potential impact, and originality. </div>
+
+
+
+
+
+<div class="title"> Pretraining Data </div>
+
+<div class="paragraph"> We distribute a developmentally plausible pretraining dataset inspired by the input to children. Submissions must use only this training data to be considered for the strict and strict-small tracks, but may use alternate or additional data for other tracks. The dataset has the following properties: </div>
+
+
+<div class="bullet"><b> • Under 100M words: </b> Children are exposed to 2M-7M words per year <a href="https://pubs.asha.org/doi/10.1044/2016_AJSLP-15-0169"> (Gilkerson et al., 2017) </a>. Choosing the beginning of adolescence (age 13) as a cutoff, children are exposed to at maximum 91M words, which we round up to 100M. </div>
+
+<div class="bullet"> <b> • Mostly transcribed speech: </b> Most of the input to children is spoken; thus, our dataset focuses on transcribed speech. </div>
+
+<div class="bullet"> <b> • Mixed domain, consisting of the following sources: </b> CHILDES (child-directed speech), 
+  Subtitles (speech), BNC (speech), TED talks (speech), children's books (simple written language). </div>
+
+<div class="paragraph"> See the <a href="https://arxiv.org/abs/2301.11796">call for papers</a> for a detailed breakdown of the pretraining datasets.</div>
+
+
+<div class="title"> Evaluation Pipeline </div>
+
+<div class="paragraph"> Models will be evaluated on a shared pipeline, hosted <a href="https://github.com/babylm/evaluation-pipeline">at this GitHub link</a>.</div>
+
+<div class="paragraph"> The public validation data we use is a mixture of BLiMP and (Super)GLUE tasks. We will hold out additional tasks for our final evaluation of submitted
+  models.
+</div>
+
+<div class="title"> Results Submissions </div>
+  
+  <div class="paragraph"> The deadline for results submissions is <strong><s>July 15</s> July 22, 23:59 anywhere on earth (UTC-12)</strong>.</div>
+  <div class="paragraph"> 
+    Submissions must be made through <a href="https://dynabench.org/babylm">Dynabench</a>.
+  </div>
+
+  
+
+<div class="title"> Paper Submissions </div>
+  
+<div class="paragraph"> The deadline for paper submissions is <strong><s>August 1</s> August 2, 23:59 anywhere on earth (UTC-12)</strong>.</div>
+  <div class="paragraph"> 
+    Submissions must be made through our <a href="https://openreview.net/group?id=EMNLP/2023/Workshop/CoNLL-CMCL_Shared_Task/BabyLM_Challenge">OpenReview portal</a>.
+    We accept two types of paper submissions:
+  </div>
+  
+  <div class="bullet"><b>•</b> Archival full papers (up to 8 pages)</div>
+  <div class="bullet"><b>•</b> Non-archival extended abstract (up to 2 pages)</div>
+  
+  <div class="paragraph"> Submissions of both types are:</div>
+
+  <div class="bullet"><b>•</b> required to use the <a href="https://2023.emnlp.org/calls/main_conference_papers/#paper-submission-and-templates">EMNLP 2023 template</a>,</div>
+  <div class="bullet"><b>•</b> given unlimited space for references,</div>
+  <div class="bullet"><b>•</b> given unlimited space for appendices,</div>
+  <div class="bullet"><b>•</b> given extra space for ethics/limitations, though these sections are optional</div>
+
+  
+  <div class="paragraph">We allow <b>dual submissions</b> of archival papers with one of the co-sponsored workshops (CoNLL and CMCL). In the event that an archival paper is accepted to both BabyLM and one of these workshops, it can only appear in one of their proceedings (i.e., it must be withdrawn from one venue). </div>
+
+  <div class="paragraph">BabyLM will hold its own <b>review process</b>, separate from CoNLL and CMCL, and the proceedings will appear in their own volume. The acceptance criteria are based on soundness: We plan only to reject submissions that make incorrect or unjustified claims. Other feedback will be directed at the improvement of submissions.</div>
+
+ <div class="title"> Timeline </div> <br>
+
+
+ <div class="bullet"> <b> January 2023: </b> Training data released </div>
+
+<div class="bullet"> <b> March 2023: </b> Shared evaluation pipeline released </div>
+
+<div class="bullet"> <b> <s>July 15</s>, July 22, 2023: </b> Models and results due </div>
+
+<div class="bullet"> <b> <s>August 1</s>, August 2, 2023: </b> Paper submissions due </div>
+  
+<div class="bullet"> <b> September 30, 2023: </b> Reviews due </div>
+  
+<div class="bullet"> <b> October 6, 2023: </b> Notification of acceptance </div>
+  
+<div class="bullet"> <b> October 20, 2023: </b> Camera ready due </div>
+
+<div class="bullet"> <b> Date TBA: </b> Shared task presented at CoNLL </div>
+
+</div>
+
+<div class="footer">
+
+<div style="float:right;"> Images provided by Smashicons </div>
+
+</div>
+
+</body>
+
+
+

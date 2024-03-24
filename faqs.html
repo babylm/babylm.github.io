@@ -7,9 +7,6 @@
 
 <body>
 
-<!-- <div style="float: right; padding: 30px; font-size: 12px;"> <img src="images/baby-nn.jpg" height="330"> <br>
-"Baby vs. Neural Net Language" from <a href="https://stablediffusionweb.com/#demo"> Stable Diffusion </a> </div> -->
-
 
 <div style="display:inline">
  <img style="float: left; padding-right: 20px;" src="./images/pacifier.png" height="80"> 
@@ -22,19 +19,19 @@
 </div>
 
 <div class="paragraph"><b>Can papers be submitted to multiple tracks?</b> <br>
-Yes. For example, a single paper can describe models which are submitted separately to the strict and strict-small tracks. </div>
+Yes. For example, a single paper can describe models which are submitted separately to the strict and strict-small tracks. Additionally, in theory, models that quality for the strict-small and strict track also qualify for the multimodal track (as they are trained on less than the 100M word budget). However, we encourage only models that engage with the multimodal pretraining objective to actually be submitted to the multimodal track :) </div>
 
 <div class="paragraph"><b>Can I submit a paper about my work?</b> <br>
-Yes, we encourage all participants to submit their reports, which will be published in the proceedings of CoNLL. You may also describe any additional experiments beyond those required for the shared task evaluation.</div>
+Yes, all participants should submit a reports, which will be published in a proceedings volume. You may also describe any additional experiments beyond those required for the shared task evaluation.</div>
 
 <div class="paragraph"><b>Can I submit additional evaluation metrics?</b> <br>
-Yes, if you wish to submit your own evaluation metrics, along with model performance. These will be considered alongside our standardized evaluation results as part of the holistic evaluation in the loose track. </div>
+Yes, if you wish to submit your own evaluation metrics, along with model performance. These will be considered alongside our standardized evaluation results as part of the holistic evaluation that determines outstanding paper awards. </div>
 
 <div class="paragraph"><b>What training regimes are permitted?</b> <br>
-For the strict and strict-small tracks, any kind of training objective/regime is permitted, as long as the data restrictions are followed. Pretrained models may not be used for any purpose such as reranking or data augmentation. We do however require for evaluation purposes that the model provides a function to score a sequence---e.g., log-likelihood for autoregressive models or pseudo-log-likelihood for masked language models---without the need for additional fine-tuning. </div>
+Any kind of training objective/regime is permitted, as long as the data restrictions are followed. Pretrained models may not be used for any purpose such as reranking or data augmentation. We do however require for evaluation purposes that the model provides a function to score a sequence---e.g., log-likelihood for autoregressive models or pseudo-log-likelihood for masked language models---without the need for additional fine-tuning. </div>
 
 <div class="paragraph"><b>Are there any limits on hyperparameters or model scale?</b> <br>
-No. In the loose track, parameter efficiency and training efficiency may be considered along with other factors in ranking submissions, but we do not impose any hard limits. </div>
+No. We may consider parameter efficiency and training efficiency when awarding outstanding paper awards, but we do not impose any hard limits. </div>
 
 <div class="paragraph"><b>Are there any limits on the number of epochs?</b> <br>
 No. We put no restrictions on the number of epochs, for several reasons: First, from an engineering perspective, training LMs with SGD tends to require multiple epochs at these scales to achieve peak performance. Second, from a cognitive perspective, humans have a memory of linguistic experience, and can continue to access and learn from these memories. Third, we aim not to take a stand on implementation details to allow the most freedom for innovation. </div>

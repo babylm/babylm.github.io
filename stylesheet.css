@@ -10,7 +10,7 @@ body {
   color: #444444;
 }
 
-@font-face {
+@font-face {  
   font-style: normal;
   size: 14px;
 }
@@ -31,10 +31,8 @@ body {
 
 
 .people{
- column-count: 3; 
+ column-count: 2; 
  padding-top: 20px;
- font-weight: bold;
- color: grey;
 }
 
 .master-title{
