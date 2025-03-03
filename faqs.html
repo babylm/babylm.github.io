@@ -18,28 +18,41 @@
 <h4> <a href="index.html"> Overview </a> • <a href="guidelines.html"> Guidelines </a> • <a href="timeline.html"> Timeline </a> • <a href="faqs.html"> FAQs </a> <hr> </h4> 
 </div>
 
+<div class="paragraph"><b>Can I do cool idea X?</b> <br>
+If it is interesting, innovative, or may result in important findings, we want you to try it! If you think the rules are holding you back from submitting to the competition, please reach out to the organizers. In the worst (or best) case scenario, it can be an interesting workshop paper.</div>
+
+<div class="paragraph"><b>Why doesn't BabyLM do cool idea X?</b> <br>
+Maybe we haven't thought about it; please reach out. We value proactivity.</div>
+  
 <div class="paragraph"><b>Can papers be submitted to multiple tracks?</b> <br>
-Yes. For example, a single paper can describe models which are submitted separately to the strict and strict-small tracks. Additionally, in theory, models that quality for the strict-small and strict track also qualify for the multimodal track (as they are trained on less than the 100M word budget). However, we encourage only models that engage with the multimodal pretraining objective to actually be submitted to the multimodal track :) </div>
+Yes. For example, a single paper can describe models that are submitted separately to the Strict and Interaction tracks.:) </div>
 
 <div class="paragraph"><b>Can I submit a paper about my work?</b> <br>
-Yes, all participants should submit a reports, which will be published in a proceedings volume. You may also describe any additional experiments beyond those required for the shared task evaluation.</div>
+Yes, all participants should submit a report, which will be published in a proceedings volume. You can also go ahead and describe any additional experiments beyond those required for the shared task evaluation.</div>
 
 <div class="paragraph"><b>Can I submit additional evaluation metrics?</b> <br>
-Yes, if you wish to submit your own evaluation metrics, along with model performance. These will be considered alongside our standardized evaluation results as part of the holistic evaluation that determines outstanding paper awards. </div>
+Yes, if you wish to submit your own evaluation metrics and model performance. These will be considered alongside our standardized evaluation results as part of the holistic evaluation that determines outstanding paper awards. </div>
 
 <div class="paragraph"><b>What training regimes are permitted?</b> <br>
-Any kind of training objective/regime is permitted, as long as the data restrictions are followed. Pretrained models may not be used for any purpose such as reranking or data augmentation. We do however require for evaluation purposes that the model provides a function to score a sequence---e.g., log-likelihood for autoregressive models or pseudo-log-likelihood for masked language models---without the need for additional fine-tuning. </div>
+Any training objective/regime is permitted as long as the data restrictions are followed. If you use ancillary models, for example, in the case of reranking or data augmentation, the training data for these models is counted towards your 100M word budget. This applies to all tracks, including Interaction track; so, for example, while you can use the external model to produce POS tags, you cannot use an off-the-shelf POS tagger in your pipeline. For evaluation purposes, we require that the model provides a function to score a sequence of words without the need for additional fine-tuning. </div>
 
 <div class="paragraph"><b>Are there any limits on hyperparameters or model scale?</b> <br>
 No. We may consider parameter efficiency and training efficiency when awarding outstanding paper awards, but we do not impose any hard limits. </div>
 
 <div class="paragraph"><b>Are there any limits on the number of epochs?</b> <br>
-No. We put no restrictions on the number of epochs, for several reasons: First, from an engineering perspective, training LMs with SGD tends to require multiple epochs at these scales to achieve peak performance. Second, from a cognitive perspective, humans have a memory of linguistic experience, and can continue to access and learn from these memories. Third, we aim not to take a stand on implementation details to allow the most freedom for innovation. </div>
+This year, yes. Refer to the ``Training Duration Limitation'' paragraph of Section 4.2 in the Call For Papers for more details. </div>
 
-<div class="paragraph"><b>Are we allowed to use annotations from outside systems that rely on expert-annotated data, like POS taggers?</b> <br>
-For the strict and strict-small tracks, we do not allow any systems that are trained on outside data, especially if they rely on expert-annotated data. However, if it is a hard-coded inductive bias that (for example) clusters words into <emph>n</emph> categories in an unsupervised manner, or relies on some outside clustering system trained only on the strict(-small) dataset, this is allowed. We allow systems that annotate (but do <b>not</b> augment) the pretraining dataset, and which are either hard-coded heuristics or trained systems that rely only on the pretraining data we release.
+<div class="paragraph"><b>Can I use external tools?</b> <br>
+Yes, but if they are learned on language, their tokens are counted towards the 100M. That means one can train on the same text, both a tokenizer, a parser, an LM, etc., or on parts of the 100M, but the sum of all text seen by all training can not surpass the amount of text allowed. This raises the question of synthetic data, which is allowed under some restrictions. You may generate the 100M tokens in any legal way you like (yes, distilling or writing your own is fair, if you figure out what text facilitates learning, it is interesting regardless of how to gather such text), you may also train eventually on more than 100M words by augmentation, however, that only works in a closed system, i.e., the augmenters' training data counts toward the limit, so, for example, training two LMs on half of the words, and then having them generate more words and training a model on both the original data and the new one is legit (and it was not tested in the previous competition, so even the example itself is interesting).
+Note that the Interaction track has an additional tool allowed (the world to interact with).
 </div>
 
+<div class="paragraph"><b>I have different modalities that can help</b> <br>
+If it is not linguistic data, prove it, last year’s submissions did not gain from non-linguistic grounding, but we encourage such scientific questions. If it is linguistic in nature (e.g., audio), then the words should still count towards the overall number of learned words.</div>
+
+<div class="paragraph"><b>Interaction track: Can I get non-verbal cues from the teacher?</b> <br>
+Yes. Note, however, that the student’s outputs are limited.</div>
+  
 <div class="paragraph"><b>Are we allowed to evaluate our model on outside benchmarks and use these results to select our model's hyperparameters?</b> <br>
 Yes.
 </div>
