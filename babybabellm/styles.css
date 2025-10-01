@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 900px;
+    padding: 40px;
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #444444;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.greybox{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom:10px;
+  background-color: #e0e0e0;
+  border-radius: 10px
+}
+
+.subheader{
+  color: grey;
+  font-weight: bold;
+}
+
+.people{
+  column-count: 2; 
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .people {
+    column-count: 1;
+  }
+}
+
+.author-info {
+    text-align: center;
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+}
+
+.author-list {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.author {
+    display: inline-block;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0.5rem;
+    padding: 0.2rem 0;
+    opacity: 0.95;
+}
+
+.author:not(:last-child)::after {
+    content: " •";
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 0.5rem;
+}
+
+.author sup {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.affiliations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.affiliations p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin: 0;
+    font-style: italic;
+}
+
+affiliations sup {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-style: normal;
+}
+
+.master-title{
+  font-size: 40px;
+  color: #0066ff;
+  font-weight: bold;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.paragraph {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.bullet{
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.nav-link:active {
+    transform: translateY(0);
+}
+
+.nav-link[target="_blank"]::after {
+    content: " ↗";
+    font-size: 0.8em;
+    opacity: 0.7;
+    margin-left: 0.2em;
+}
+
+.title{
+  padding-top: 20px;
+  font-size: 20px;
+  color: #0066ff;
+  font-weight: bold;
+  border-bottom: 2px dotted grey;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+a:link {
+  color: #0066ff;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0066ff;
+}
+
+a:hover {
+  color: #cc66ff;
+}
+
+#navbar {
+  font-size: 20px;
+  margin-top: 12px;
+}
+
+#title {
+  font-size: 30px;
+  color: #0066ff;
+  font-weight: bold; 
+}
+
+#row-title {
+  font-size: 20px;
+  color: #0066ff;
+  font-weight: bold; 
+
+}
+
+.footer{
+  padding-top: 20px;
+  color: grey;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#headshot {
+  float:left;
+  padding-right: 6px;
+}
+
+hr {
+  border-top: 1px solid gray;
+}
+
+.column {
+  float: left;
+  width: 45%;
+  padding: 5px;
+}
+
+.leaflet-container {
+    cursor: grab;
+}
+
+.leaflet-container.leaflet-drag-target {
+    cursor: grabbing;
+}
+
+.leaflet-container {
+    position: relative;
+}
+
+.language-label {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.label-text {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0,0.1);
+    display: inline-block;
+    pointer-events: none;
+}
+
+.blog-section {
+    background: #0b0f1a;
+    min-height: 60vh;
+    padding: 3rem 0;
+}
+
+.research-paper {
+    background: #0f1629;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    overflow: hidden;
+}
+
+.paper-header {
+    background: radial-gradient(800px 400px at 10% -10%, rgba(99,102,241,0.12) 0%, rgba(99,102,241,0) 60%),
+                radial-gradient(800px 400px at 90% -10%, rgba(236,72,153,0.12) 0%, rgba(236,72,153,0) 60%),
+                #0f1629;
+    padding: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.paper-header h2 {
+    color: #f3f4f6;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.paper-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    color: #a3aab8;
+    font-size: 0.9rem;
+}
+
+.paper-meta span {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.paper-content {
+    padding: 2rem;
+}
+
+.paper-content section {
+    margin-bottom: 2.5rem;
+}
+
+.paper-content h3 {
+    color: #e5e7eb;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-left: 4px solid #6366f1;
+    padding-left: 1rem;
+}
+
+.paper-content p {
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-items {
+        gap: 1rem;
+        padding: 0.8rem 0;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .map-container {
+        height: 400px;
+    }
+    
+    .paper-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .paper-header,
+    .paper-content {
+        padding: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .author-info {
+        margin: 1rem auto 0;
+    }
+    
+    .author {
+        font-size: 0.9rem;
+        margin: 0 0.3rem;
+    }
+    
+    .affiliations {
+        flex-direction: column;
+        gap: 0.3rem;
+        align-items: center;
+    }
+    
+    .affiliations p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.7rem;
+    }
+    
+    .nav-items {
+        gap: 0.5rem;
+        padding: 0.6rem 0;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .map-container {
+        height: 300px;
+    }
+    
+    .paper-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.map-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.loading-spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-right: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.legend-control {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 250px;
+    backdrop-filter: blur(10px);
+}
+
+.map-legend h4 {
+    margin: 0 0 12px 0;
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 4px 0;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.legend-label {
+    font-size: 13px;
+    color: #34495e;
+    font-weight: 500;
+    flex: 1;
+}
+
+.legend-item:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .legend-control {
+        max-width: 200px;
+        padding: 10px;
+    }
+    
+    .map-legend h4 {
+        font-size: 14px;
+    }
+    
+    .legend-label {
+        font-size: 12px;
+    }
+    
+    .legend-color {
+        width: 14px;
+        height: 14px;
+    }
+} 

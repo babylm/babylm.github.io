@@ -1,0 +1,46 @@
+iso_code,Name,Language repo,Subtitles repo,Subtitles padding,GlotStoryBooks,CHILDES,Wikis,Ririro,Status,Tier,Developmentally plausible,Padding,Total,% Developmentally plausible,Comments,Tier 100M in MB,Tier 10M in MB,Tier 1M in MB,Current size,Byte-premium factor,% of Data Missing,original order,CHILDES Status,latitude,longitude,family
+deu,German,x,x,x,x,x,x,x,Done,Tier 1 (100m),"16,431,993","91,478,846","107,910,839",0.152,DONE (Nikitas),572.17,57.22,5.72,569.1,1.0537171,0.54%,8,correct,52,10,Indo-European
+eng,English,x,,x,x,x,x,x,Done,Tier 1 (100m),"78,172,018","20,706,303","98,878,321",0.791,DONE,543,54.3,5.43,539.18,1,0.70%,1,correct,52,0,Indo-European
+fra,French,x,x,x,x,x,x,x,Done,Tier 1 (100m),"20,222,354","106,358,431","126,580,785",0.16,DONE (Nikitas),637.59,63.76,6.38,634.88,1.1742064,0.43%,7,correct,48,2,Indo-European
+nld,Dutch,x,x,x,x,x,x,x,Done,Tier 1 (100m),"39,878,816","70,006,748","109,885,564",0.363,DONE (Nikitas),571.06,57.11,5.71,569.59,1.0516739,0.26%,2,correct,52.5,6,Indo-European
+zho,Chinese (Mandarin),x,,,x,x,,,Done,Tier 1 (100m),"45,001,645","105,307,983","150,309,628",0.299,DONE (Siyuan & Faiz),537.23,53.72,5.37,537.15,0.9893825,0.02%,4,correct,34,110,Sino-Tibetan
+bul,Bulgarian,x,x,x,,x,,x,Done,Tier 1 (100m),"24,942,605","90,435,735","115,378,340",0.216,DONE (Nikitas & Yuri),984.11,98.41,9.84,981.07,1.8123562,0.31%,5,Latin,42.5,25,Indo-European
+fas,Persian,x,x,x,x,x,,x,Done,Tier 1 (100m),"94,622,324","3,915,679","98,538,003",0.96,DONE,867.35,86.73,8.67,867.4,1.5973263,-0.01%,31,Latin,32,54,Indo-European
+ind,Indonesian,x,x,x,x,,,x,Done,Tier 1 (100m),"17,305,674","96,044,750","113,350,424",0.153,DONE RE-PADDING (Faiz),640.09,64.01,6.4,638.87,1.1788023,0.19%,6,,0,106,Austronesian
+ukr,Ukrainian,x,x,x,x,,,x,Done,Tier 1 (100m),"28,789,185","58,804,062","87,593,247",0.329,DONE (Nikitas),951.05,95.11,9.51,945.57,1.7514786,0.58%,3,,49,33,Indo-European
+afr,Afrikaans,x,x,x,x,x,Wikpedia (for padding)x,,Done,Tier 2 (10m),"1,858,477","7,448,952","9,307,429",0.2,DONE (Francois),563.25,56.33,5.63,56.28,1.0373004,0.08%,26,correct,-31,22,Indo-European
+cym,Welsh,x,x,x,,x,,,Done,Tier 2 (10m),"1,109,683","7,602,459","8,712,142",0.127,DONE RE-PADDING (Faiz),557.43,55.74,5.57,55.39,1.0265667,0.63%,20,correct,52,-3,Indo-European
+est,Estonian,x,x,x,,x,,,Done,Tier 2 (10m),"1,026,491","8,814,184","9,840,675",0.104,DONE RE-PADDING (Faiz),525.51,52.55,5.26,52.37,0.9677856,0.34%,19,correct,59,26,Uralic
+eus,Basque,x,x,x,,x,x,,Done,Tier 2 (10m),"1,917,428","6,271,869","8,189,297",0.234,DONE RE-PADDING (Faiz),575.35,57.54,5.75,57.06,1.0595837,0.83%,14,correct,43,-3,Basque
+ita,Italian,x,x,x,x,x,x,x,Done,Tier 2 (10m),"8,996,283","471,404","9,467,687",0.95,DONE (NIkitas),579.34,57.93,5.79,57.96,1.066923,-0.05%,10,correct,43,12,Indo-European
+pol,Polish,x,x,x,x,x,,x,Done,Tier 2 (10m),"1,305,986","8,906,729","10,212,715",0.128,DONE RE-PADDING (Faiz),585.04,58.5,5.85,58.29,1.0774161,0.37%,13,correct,52,20,Indo-European
+por,Portuguese,x,x,x,x,x,x,x,Done,Tier 2 (10m),"1,339,003","10,348,599","11,687,602",0.115,DONE (Nikitas),596.17,59.62,5.96,59.5,1.097927,0.20%,17,correct,39,-8,Indo-European
+spa,Spanish,x,x,x,x,x,x,x,Done,Tier 2 (10m),"8,364,239","1,344,853","9,709,092",0.861,DONE (Nikitas),588.54,58.85,5.89,58.75,1.0838621,0.18%,11,correct,40,-4,Indo-European
+srp,Serbian,x,x,x,x,x,,x,Done,Tier 2 (10m),"1,519,804","13,707,246","15,227,050",0.1,DONE RE-PADDING (Faiz),773.75,77.37,7.74,77.25,1.4249495,0.16%,16,correct,44,21,Indo-European
+swe,Swedish,x,x,x,x,x,x,,Done,Tier 2 (10m),"1,276,616","9,810,043","11,086,659",0.115,DONE RE-PADDING (Faiz),554.42,55.44,5.54,55.21,1.0210256,0.42%,22,correct,60,15,Indo-European
+yue,Cantonese,x,,,x,x,,,Done,Tier 2 (10m),"3,174,545","11,870,650","15,045,195",0.211,Done (Linyang & Faiz),468.32,46.83,4.68,46.74,0.8624614,0.20%,44,correct,23,113,Sino-Tibetan
+ara,Arabic,x,x,x,x,x,x,x,Done,Tier 2 (10m),"4,977,324","3,349,526","8,326,850",0.598,DONE (Nikitas),795.56,79.56,7.96,79.57,1.4651134,-0.02%,15,Latin,25,42,Afro-Asiatic
+ell,Greek,x,x,x,x,x,x,,Done,Tier 2 (10m),"6,104,338","4,847,444","10,951,782",0.557,DONE (Nikitas),"1,068.25",106.82,10.68,106.74,1.9673049,0.08%,12,Latin,39,22,Indo-European
+heb,Hebrew,x,,,,x,,,Done,Tier 2 (10m),"1,045,939","6,117,225","7,163,164",0.146,DONE RE-PADDING (Faiz),736.06,73.61,7.36,73.38,1.3555346,0.31%,18,Latin,31.5,34.83333333,Afro-Asiatic
+jpn,Japanese,x,x,x,x,x,,,Done,Tier 2 (10m),"13,660,088","721,565","14,381,653",0.95,DONE (Nikitas),717.86,71.79,7.18,71.79,1.322025,-0.01%,9,Latin,37,140,Japanese
+ces,Czech,x,,,,x,,,Done,Tier 3 (1m),"377,313","385,263","762,576",0.495,DONE RE-PADDING (Faiz),562.49,56.25,5.62,5.64,1.0358867,-0.27%,38,correct,50,15,Indo-European
+dan,Danish,x,,,x,x,,,Done,Tier 3 (1m),"381,684","457,152","838,836",0.455,DONE RE-PADDING (Faiz),554.44,55.44,5.54,5.53,1.0210658,0.26%,41,correct,56,10,Indo-European
+hrv,Croatian,x,x,x,,x,,,Done,Tier 3 (1m),"469,078","445,976","915,054",0.513,DONE RE-PADDING (Faiz),537.42,53.74,5.37,5.39,0.9897218,-0.29%,21,correct,45,15,Indo-European
+hun,Hungarian,x,,,x,x,,,Done,Tier 3 (1m),"397,275","322,636","719,911",0.552,DONE RE-PADDING (Faiz),553.85,55.39,5.54,5.55,1.0199851,-0.21%,40,correct,47,20,Uralic
+isl,Icelandic,x,x,x,,x,,,Done,Tier 3 (1m),"452,099","470,031","922,130",0.49,DONE RE-PADDING (Faiz),626.84,62.68,6.27,6.27,1.1543925,-0.03%,25,correct,65,-17,Indo-European
+kor,Korean,x,x,x,x,x,,,Done,Tier 3 (1m),"656,143","138,940","795,083",0.825,DONE RE-PADDING (Faiz),702.29,70.23,7.02,7.07,1.2933602,-0.67%,24,correct,37.5,128,Korean
+nor,Norwegian,x,,,x,x,,,Done,Tier 3 (1m),"404,960","496,473","901,433",0.449,DONE RE-PADDING (Faiz),611.05,61.1,6.11,6.11,1.125316,0.01%,42,correct,61,8,Indo-European
+nso,Sepedi (Northern Sotho),x,,,x,,Wikpedia (for padding)x,,Done,Tier 3 (1m),"214,672","871,565","1,086,237",0.198,DONE RE-PADDING (Francois & Faiz & Nikitas),605.82,60.58,6.06,6.06,1.1156964,-0.03%,30,correct,-24,29,Niger-Congo
+ron,Romanian,x,x,x,x,x,,,Done,Tier 3 (1m),"578,797","393,308","972,105",0.595,DONE RE-PADDING (Faiz),605.54,60.55,6.06,6.1,1.1151666,-0.74%,23,correct,46,25,Indo-European
+sot,Sesotho (Southern Sotho),x,,,x,x,Wikpedia (for padding)x,,Done,Tier 3 (1m),"214,672","785,966","1,000,638",0.215,DONE (Francois),633.2,63.32,6.33,6.31,1.1661078,0.35%,29,correct,-28,27,Niger-Congo
+tur,Turkish,x,,,x,x,,,Done,Tier 3 (1m),"259,590","405,478","665,068",0.39,DONE RE-PADDING (Faiz),567.15,56.72,5.67,5.72,1.0444815,-0.85%,39,correct,39,35,Altaic
+rus,Russian,x,,,x,x,x,x,Done,Tier 3 (1m),"244,102","561,542","805,644",0.303,DONE RE-PADDING (Faiz),989.8,98.98,9.9,9.88,1.8228284,0.18%,43,Latin,56,38,Indo-European
+ace,Acehnese,x,,,,,,,Done,Tier 3 (1m),"242,613","725,581","968,194",0.251,DONE RE-PADDING (Faiz),674.4,67.44,6.74,6.74,1.2419926,0.06%,36,,5.5,95.5,Austronesian
+ban,Balinese,x,,,,,,,Done,Tier 3 (1m),"63,826","874,899","938,725",0.068,DONE RE-PADDING (Faiz),689.36,68.94,6.89,6.87,1.2695436,0.34%,35,,-8.333333333,115.25,Austronesian
+bug,Buginese,x,,,,,,,Done,Tier 3 (1m),"41,174","961,405","1,002,579",0.041,DONE RE-PADDING (Faiz),666.75,66.68,6.67,6.67,1.2279017,-0.04%,37,,-4,120,Austronesian
+jav,Javanese,x,,,,,,,Done,Tier 3 (1m),"307,282","645,365","952,647",0.323,DONE RE-PADDING (Faiz),622.74,62.27,6.23,6.23,1.1468458,-0.04%,32,,-7,111,Austronesian
+mak,Makassarese,x,,,,,,,Done,Tier 3 (1m),"34,080","873,230","907,310",0.038,DONE RE-PADDING (Faiz),679.13,67.91,6.79,6.79,1.250697369,0.02%,34,,-5.416666667,119.5833333,Austronesian
+min,Minangkabau,x,,,,,,,Done,Tier 3 (1m),"122,536","663,669","786,205",0.156,DONE RE-PADDING (Faiz),515.72,51.57,5.16,5.16,0.9497515,-0.06%,45,,-1,101,Austronesian
+sun,Sundanese,x,,,,,,,Done,Tier 3 (1m),"17,441","874,647","892,088",0.02,DONE RE-PADDING (Faiz),595.66,59.57,5.96,5.96,1.0969809,-0.06%,33,,-7,107,Austronesian
+xho,isiXhosa,x,,,x,,Wikpedia (for padding)x,,Done,Tier 3 (1m),"291,743","387,662","679,405",0.429,DONE (Francois),651,65.1,6.51,6.52,1.198886,-0.15%,27,,-32,27,Niger-Congo
+zul,isiZulu,x,,,x,,Wikpedia (for padding)x,,Done,Tier 3 (1m),"221,198","532,402","753,600",0.294,DONE (Francois),632.02,63.2,6.32,6.31,1.1639372,0.16%,28,,-30,30,Niger-Congo
