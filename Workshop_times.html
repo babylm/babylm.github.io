@@ -3,194 +3,7 @@
 <head>
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="icon" href="./images/pacifier.png">
-\* GPT generated...*\
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Conference Schedule — Day</title>
-  <style>
-    :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --muted:#9aa8bf;
-      --accent1:#6ee7b7;
-      --accent2:#60a5fa;
-      --glass: rgba(255,255,255,0.04);
-      --radius:14px;
-      --maxw:980px;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      min-height:100vh;
-      background:
-        radial-gradient(1200px 400px at 10% 10%, rgba(96,165,250,0.07), transparent 12%),
-        radial-gradient(900px 300px at 90% 90%, rgba(110,231,183,0.04), transparent 12%),
-        var(--bg);
-      color:#e6eef8;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
 
-    .container{
-      width:100%;
-      max-width:var(--maxw);
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:18px;
-      padding:22px;
-      box-shadow: 0 12px 40px rgba(3,7,18,0.6);
-      border: 1px solid rgba(255,255,255,0.03);
-    }
-
-    header{
-      display:flex;
-      gap:16px;
-      align-items:center;
-      margin-bottom:18px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-    .logo{
-      width:56px;
-      height:56px;
-      border-radius:12px;
-      background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      display:grid;
-      place-items:center;
-      font-weight:700;
-      color:#07203a;
-      box-shadow: 0 6px 20px rgba(96,165,250,0.12), inset 0 -6px 14px rgba(255,255,255,0.04);
-      font-size:18px;
-    }
-    h1{
-      margin:0;
-      font-size:20px;
-      line-height:1.05;
-      letter-spacing:-0.2px;
-    }
-    p.lead{
-      margin:0;
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 360px;
-      gap:18px;
-      align-items:start;
-    }
-
-    /* schedule column */
-    .schedule{
-      background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01));
-      padding:16px;
-      border-radius:var(--radius);
-      min-height:240px;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-    .session{
-      display:flex;
-      gap:14px;
-      align-items:flex-start;
-      padding:12px;
-      border-radius:12px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.012), transparent);
-      margin-bottom:10px;
-      transition:transform .16s ease, box-shadow .16s ease;
-    }
-    .session:hover{
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(2,6,23,0.6);
-    }
-    .time{
-      min-width:86px;
-      font-weight:600;
-      color:var(--accent2);
-      font-size:13px;
-      background:var(--glass);
-      padding:8px 10px;
-      border-radius:10px;
-      text-align:center;
-    }
-    .details{
-      flex:1;
-    }
-    .title{
-      margin:0 0 6px 0;
-      font-size:15px;
-      font-weight:600;
-      color:#e9f6ff;
-    }
-    .meta{
-      margin:0;
-      font-size:13px;
-      color:var(--muted);
-    }
-
-    /* side column (summary / timeline) */
-    .side{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-    }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
-      padding:14px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-    .big-time{
-      font-size:28px;
-      font-weight:700;
-      color:var(--accent1);
-      margin:4px 0 0 0;
-    }
-    .small{
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    /* grouping for lunch and poster (bigger) */
-    .session.feature{
-      background: linear-gradient(90deg, rgba(96,165,250,0.06), rgba(110,231,183,0.03));
-      border: 1px solid rgba(96,165,250,0.06);
-    }
-
-    footer{
-      margin-top:16px;
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      align-items:center;
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    /* responsive */
-    @media (max-width:880px){
-      .grid{ grid-template-columns: 1fr; }
-      .side{ order:2 }
-      .schedule{ order:1 }
-    }
-
-    /* print */
-    @media print{
-      body{ background:white; color:black; padding:0; }
-      .container{ box-shadow:none; border:none; max-width:100%; padding:0; }
-      header, footer, .side { display:none; }
-      .schedule{ border:none; background:transparent; padding:0; }
-      .session{ background:transparent; box-shadow:none; padding:4px; margin:0 0 6px 0; border-radius:0; }
-      .time{ background:transparent; color:black; font-weight:600; }
-    }
-  </style>
 </head>
 
 <body>
@@ -206,142 +19,100 @@
 <h4> <a href="index.html"> Overview </a> • <a href="Workshop_times.html"> Workshop Schedule </a>  • <a href="guidelines.html"> Guidelines </a> • <a href="timeline.html"> Timeline</a> • <a href="faqs.html"> FAQs </a>• <a href="papers.html"> Previous papers </a> <hr> </h4> 
 </div>
   
-  <main class="container" role="main" aria-labelledby="schedule-title">
-    <header>
-      <div class="brand" aria-hidden="true">
-        <div class="logo">Sched</div>
-      </div>
-      <div>
-        <h1 id="schedule-title">Conference Day — Schedule</h1>
-        <p class="lead">A compact agenda for the day — times shown in local time.</p>
-      </div>
-    </header>
+<section class="schedule" aria-labelledby="schedule-heading">
+  <h2 id="schedule-heading">Workshop Schedule</h2>
 
-    <section class="grid" aria-label="Daily schedule">
-      <section class="schedule" aria-labelledby="sessions-heading">
-        <h2 id="sessions-heading" style="font-size:14px;margin:0 0 12px 0;color:var(--muted)">Sessions</h2>
+  <ul class="schedule-list">
+    <li>
+      <time class="schedule-time">9:00am – 10:00am</time>
+      <span class="schedule-title">Intro + Shared Task Oral Presentations</span>
+    </li>
+    <li>
+      <time class="schedule-time">10:00am – 10:30am</time>
+      <span class="schedule-title">Workshop Orals 1</span>
+    </li>
+    <li>
+      <time class="schedule-time">10:30am – 11:00am</time>
+      <span class="schedule-title">Break</span>
+    </li>
+    <li>
+      <time class="schedule-time">11:00am – 12:00pm</time>
+      <span class="schedule-title">Keynote 1</span>
+    </li>
+    <li>
+      <time class="schedule-time">12:00pm – 2:00pm</time>
+      <span class="schedule-title">Lunch</span>
+    </li>
+    <li>
+      <time class="schedule-time">2:00pm – 3:30pm</time>
+      <span class="schedule-title">Poster Session</span>
+    </li>
+    <li>
+      <time class="schedule-time">3:30pm – 4:00pm</time>
+      <span class="schedule-title">Break</span>
+    </li>
+    <li>
+      <time class="schedule-time">4:00pm – 5:00pm</time>
+      <span class="schedule-title">Keynote 2</span>
+    </li>
+    <li>
+      <time class="schedule-time">5:00pm – 5:30pm</time>
+      <span class="schedule-title">Workshop Orals 2</span>
+    </li>
+    <li>
+      <time class="schedule-time">5:30pm – 5:35pm</time>
+      <span class="schedule-title">Closing Session / Awards</span>
+    </li>
+  </ul>
+</section>
 
-        <article class="session" aria-labelledby="s1-title">
-          <div class="time"><time datetime="09:00">9am - 10:00am</time></div>
-          <div class="details">
-            <h3 id="s1-title" class="title">Intro + shared task oral presentations</h3>
-            <p class="meta">Opening remarks followed by short oral presentations of the shared tasks.</p>
-          </div>
-        </article>
+<style>
+  .schedule {
+    max-width: 700px;
+    margin: 2rem auto;
+  }
 
-        <article class="session" aria-labelledby="s2-title">
-          <div class="time"><time datetime="10:00">10:00am - 10:30am</time></div>
-          <div class="details">
-            <h3 id="s2-title" class="title">Workshop orals 1</h3>
-            <p class="meta">First block of workshop oral presentations.</p>
-          </div>
-        </article>
+  .schedule h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
 
-        <article class="session" aria-labelledby="s3-title">
-          <div class="time"><time datetime="10:30">10:30am - 11:00am</time></div>
-          <div class="details">
-            <h3 id="s3-title" class="title">Break</h3>
-            <p class="meta">Coffee, networking, and informal discussions.</p>
-          </div>
-        </article>
+  .schedule-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #e0e0e0;
+  }
 
-        <article class="session" aria-labelledby="s4-title">
-          <div class="time"><time datetime="11:00">11:00am - 12:00pm</time></div>
-          <div class="details">
-            <h3 id="s4-title" class="title">Keynote 1</h3>
-            <p class="meta">Keynote presentation — main hall.</p>
-          </div>
-        </article>
+  .schedule-list li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
 
-        <article class="session feature" aria-labelledby="s5-title">
-          <div class="time"><time datetime="12:00">12:00pm - 2:00pm</time></div>
-          <div class="details">
-            <h3 id="s5-title" class="title">Lunch</h3>
-            <p class="meta">Lunch break (2 hours) — enjoy the buffet and poster browsing.</p>
-          </div>
-        </article>
+  .schedule-time {
+    font-weight: 500;
+    color: #555;
+  }
 
-        <article class="session feature" aria-labelledby="s6-title">
-          <div class="time"><time datetime="14:00">2:00pm - 3:30pm</time></div>
-          <div class="details">
-            <h3 id="s6-title" class="title">Poster session</h3>
-            <p class="meta">Posters open for viewing and author questions.</p>
-          </div>
-        </article>
+  .schedule-title {
+    font-weight: 400;
+    color: #222;
+  }
 
-        <article class="session" aria-labelledby="s7-title">
-          <div class="time"><time datetime="15:30">3:30pm - 4:00pm</time></div>
-          <div class="details">
-            <h3 id="s7-title" class="title">Break</h3>
-            <p class="meta">Short afternoon break.</p>
-          </div>
-        </article>
+  @media (max-width: 600px) {
+    .schedule-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .schedule-time {
+      margin-bottom: 0.25rem;
+    }
+  }
+</style>
 
-        <article class="session" aria-labelledby="s8-title">
-          <div class="time"><time datetime="16:00">4:00pm - 5:00pm</time></div>
-          <div class="details">
-            <h3 id="s8-title" class="title">Keynote 2</h3>
-            <p class="meta">Second keynote presentation — main hall.</p>
-          </div>
-        </article>
-
-        <article class="session" aria-labelledby="s9-title">
-          <div class="time"><time datetime="17:00">5:00pm - 5:30pm</time></div>
-          <div class="details">
-            <h3 id="s9-title" class="title">Workshop orals 2</h3>
-            <p class="meta">Final block of workshop oral presentations.</p>
-          </div>
-        </article>
-
-        <article class="session" aria-labelledby="s10-title">
-          <div class="time"><time datetime="17:30">5:30pm - 5:35pm</time></div>
-          <div class="details">
-            <h3 id="s10-title" class="title">Closing session / Awards</h3>
-            <p class="meta">Short closing remarks and awards presentation.</p>
-          </div>
-        </article>
-
-      </section>
-
-      <aside class="side" aria-label="Summary and notes">
-        <div class="card" role="region" aria-labelledby="summary-title">
-          <h3 id="summary-title" style="margin:0;font-size:13px;color:var(--muted)">Today at a glance</h3>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;">
-            <div>
-              <div class="big-time">9:00am → 5:35pm</div>
-              <div class="small">Total scheduled time</div>
-            </div>
-            <div style="text-align:right">
-              <div style="font-weight:700">9 events</div>
-              <div class="small">Including breaks & lunch</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" role="region" aria-labelledby="notes-title">
-          <h3 id="notes-title" style="margin:0;font-size:13px;color:var(--muted)">Notes</h3>
-          <ul style="margin:10px 0 0 18px;color:var(--muted);font-size:13px;line-height:1.45">
-            <li>Speakers: please be punctual for session handover.</li>
-            <li>Poster authors should be at their boards by 1:55pm.</li>
-            <li>Keynotes are in the main hall (A).</li>
-          </ul>
-        </div>
-
-        <div class="card" role="region" aria-labelledby="actions-title" style="display:flex;flex-direction:column;gap:8px">
-          <h3 id="actions-title" style="margin:0;font-size:13px;color:var(--muted)">Actions</h3>
-          <div style="display:flex;gap:8px;margin-top:8px">
-            <a href="#" onclick="window.print();return false;" style="text-decoration:none;background:linear-gradient(90deg,var(--accent2),var(--accent1));padding:8px 12px;border-radius:10px;color:#062232;font-weight:700;box-shadow:0 8px 20px rgba(96,165,250,0.08)">Print</a>
-            <a href="#" style="text-decoration:none;padding:8px 12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)">Download PDF</a>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <footer>
-      <div>Generated schedule • <span style="color:var(--muted)">Copy this HTML file for distribution</span></div>
-      <div style="color:var(--muted)">Times: local</div>
-    </footer>
-  </main>
 
 
 <div class="footer">
