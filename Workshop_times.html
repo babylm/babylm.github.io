@@ -18,8 +18,7 @@
 <div id="navbar">
 <h4> <a href="index.html"> Overview </a> • <a href="Workshop_times.html"> Workshop Schedule </a>  • <a href="guidelines.html"> Guidelines </a> • <a href="timeline.html"> Timeline</a> • <a href="faqs.html"> FAQs </a>• <a href="papers.html"> Previous papers </a> <hr> </h4> 
 </div>
-  
-<section class="schedule" aria-labelledby="schedule-heading">
+  <section class="schedule" aria-labelledby="schedule-heading">
   <h2 id="schedule-heading">Workshop Schedule</h2>
 
   <ul class="schedule-list">
@@ -44,7 +43,7 @@
   }
 
   .schedule h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 1rem;
     color: #222;
@@ -58,27 +57,31 @@
 
   .schedule-list li {
     display: grid;
-    grid-template-columns: 150px 1fr; /* fixed column keeps alignment consistent */
+    grid-template-columns: 150px 1fr;
     align-items: baseline;
     gap: 1rem;
-    padding: 0.5rem 0;
+    padding: 0.35rem 0; /* tightened spacing */
+    border: none !important; /* kill inherited borders */
+  }
+
+  .schedule-list li * {
+    border: none !important;           /* remove dotted or solid lines */
+    text-decoration: none !important;  /* remove link-style underlines */
   }
 
   .time {
     font-weight: 500;
-    color: #555;
+    color: #666;
     text-align: right;
     font-variant-numeric: tabular-nums;
-    white-space: nowrap; /* prevents wrapping */
+    white-space: nowrap;
   }
 
   .title {
     color: #222;
     font-weight: 500;
-    text-decoration: none;
   }
 
-  /* Optional: subtle highlight for lunch and posters */
   .schedule-list li:nth-child(5),
   .schedule-list li:nth-child(6) {
     background-color: #fafafa;
@@ -87,21 +90,15 @@
   @media (max-width: 600px) {
     .schedule-list li {
       grid-template-columns: 1fr;
-      gap: 0.25rem;
-      padding: 0.75rem 0;
+      gap: 0.2rem;
+      padding: 0.5rem 0;
     }
 
     .time {
       text-align: left;
-      color: #666;
-      font-size: 0.95rem;
     }
   }
 </style>
-
-
-
-
 
 
 <div class="footer">
