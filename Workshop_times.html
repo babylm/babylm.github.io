@@ -23,16 +23,16 @@
   <h2 id="schedule-heading">Workshop Schedule</h2>
 
   <ul class="schedule-list">
-    <li><span class="time">9:00 – 10:00 am</span><span class="title">Intro + Shared Task Oral Presentations</span></li>
-    <li><span class="time">10:00 – 10:30 am</span><span class="title">Workshop Orals 1</span></li>
-    <li><span class="time">10:30 – 11:00 am</span><span class="title">Break</span></li>
-    <li><span class="time">11:00 – 12:00 pm</span><span class="title">Keynote 1</span></li>
-    <li><span class="time">12:00 – 2:00 pm</span><span class="title">Lunch</span></li>
-    <li><span class="time">2:00 – 3:30 pm</span><span class="title">Poster Session</span></li>
-    <li><span class="time">3:30 – 4:00 pm</span><span class="title">Break</span></li>
-    <li><span class="time">4:00 – 5:00 pm</span><span class="title">Keynote 2</span></li>
-    <li><span class="time">5:00 – 5:30 pm</span><span class="title">Workshop Orals 2</span></li>
-    <li><span class="time">5:30 – 5:35 pm</span><span class="title">Closing Session / Awards</span></li>
+    <li><span class="time">9:00–10:00&nbsp;am</span><span class="title">Intro + Shared Task Oral Presentations</span></li>
+    <li><span class="time">10:00–10:30&nbsp;am</span><span class="title">Workshop Orals 1</span></li>
+    <li><span class="time">10:30–11:00&nbsp;am</span><span class="title">Break</span></li>
+    <li><span class="time">11:00–12:00&nbsp;pm</span><span class="title">Keynote 1</span></li>
+    <li><span class="time">12:00–2:00&nbsp;pm</span><span class="title">Lunch</span></li>
+    <li><span class="time">2:00–3:30&nbsp;pm</span><span class="title">Poster Session</span></li>
+    <li><span class="time">3:30–4:00&nbsp;pm</span><span class="title">Break</span></li>
+    <li><span class="time">4:00–5:00&nbsp;pm</span><span class="title">Keynote 2</span></li>
+    <li><span class="time">5:00–5:30&nbsp;pm</span><span class="title">Workshop Orals 2</span></li>
+    <li><span class="time">5:30–5:35&nbsp;pm</span><span class="title">Closing Session / Awards</span></li>
   </ul>
 </section>
 
@@ -54,31 +54,31 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    border-top: 1px solid #e0e0e0;
   }
 
   .schedule-list li {
     display: grid;
-    grid-template-columns: 130px 1fr; /* fixed column for times */
+    grid-template-columns: 150px 1fr; /* fixed column keeps alignment consistent */
     align-items: baseline;
     gap: 1rem;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 0.5rem 0;
   }
 
   .time {
     font-weight: 500;
     color: #555;
-    text-align: right;              /* aligns times neatly */
-    font-variant-numeric: tabular-nums; /* monospaced digits */
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap; /* prevents wrapping */
   }
 
   .title {
-    color: #333;                    /* neutral gray, not link blue */
-    text-decoration: none;          /* ensures no underline */
+    color: #222;
+    font-weight: 500;
+    text-decoration: none;
   }
 
-  /* highlight key blocks (optional subtle shading) */
+  /* Optional: subtle highlight for lunch and posters */
   .schedule-list li:nth-child(5),
   .schedule-list li:nth-child(6) {
     background-color: #fafafa;
@@ -90,6 +90,7 @@
       gap: 0.25rem;
       padding: 0.75rem 0;
     }
+
     .time {
       text-align: left;
       color: #666;
@@ -97,6 +98,7 @@
     }
   }
 </style>
+
 
 
 
