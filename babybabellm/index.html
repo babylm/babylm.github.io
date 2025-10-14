@@ -32,12 +32,62 @@
     </div>
     <div class="title"> Overview </div> <br>
     <div class="paragraph">
-        We present BabyBabelLM, a multilingual collection of datasets modeling the language a person observes from birth until they acquire a native language. We curate developmentally plausible pretraining data aiming to cover the equivalent of 100M English words of content in each of \numLanguages languages. We compile evaluation suites and train baseline models in each language. BabyBabelLM aims to facilitate multilingual pretraining and cognitive modeling.
+        We present BabyBabelLM, a multilingual collection of datasets modeling the language a person observes from birth until they acquire a native language. We curate developmentally plausible pretraining data aiming to cover the equivalent of 100M English words of content in each of 45 languages. We compile evaluation suites and train baseline models in each language. BabyBabelLM aims to facilitate multilingual pretraining and cognitive modeling.
     </div>
     <div class="title"> Dataset Construction </div> <br>
-    <div class="paragraph">
 
-    </div>
+<ul style="margin-left: 20px;">
+        <li><div class="paragraph"> <b> Composition: </b> In constructing BabyBabelLM our guiding principle was <i> developmental plausibility </i> — the idea that pretraining data should approximate the child's linguistic environment. To this end, we prioritized domains such as: child-directed speech, educational materials, children's books, and transcribed conversations. We considered a diverse set of sources, including publicly available datasets, open-access children books and wikis, and local experts in linguistics and language acquisition. This involved both the curation of available developmentally plausible resources, and the addition of original data.  
+        <br><br> 
+        For most languages, the collection effort was led by a researcher fluent or familiar with that language, responsible for gathering appropriate corpora and ensuring dataset quality. In addition to language-specific data, languages were supplemented with extensive multilingual resources (e.g., <a href="https://talkbank.org/childes/">CHILDES</a>, <a href="https://github.com/cisnlp/GlotStoryBook">GlotStoryBooks</a>), which also comprised the main dataset content for languages without a dedicated leader. Synthetic data were deliberately excluded due to their qualitative differences from naturally occurring language.     </div></li>
+
+
+        <li><div class="paragraph"> <b> Preprocessing </b> : After language-specific collection, all data were uniformly processed through a shared preprocessing pipeline developed as part of the project, ensuring comparability across languages. In addition, each dataset was annotated with rich document-level metadata in a standardized format, describing the document’s source, content, age estimate, license, and other information.      </div></li>
+
+        
+        <li><div class="paragraph"> <b> Language Tiers </b>: Given the difference in availability of developmentally plausible corpora, we sorted languages into three tiers based on training set size, corresponding to the equivalent of respectively 100M, 10M, or 1M English words. Dataset sizes were calibrated by language-adjusted byte estimates (<a href="https://aclanthology.org/2024.sigul-1.1.pdf">paper link</a>), to maintain comparability of data budgets across languages with differing orthographic and morphological characteristics. </div></li>
+
+
+        <li><div class="paragraph"> <b> Licensing </b>: Finally, throughout collection, we took great care in verifying that all data were released under licenses that permit academic research, and we release our data with document-level licensing information and data source attribution to ensure each resource is used ethically and responsibly. </div></li>
+
+
+
+</ul>
+
+<div class="title"> Contributing </div> <br>
+
+
+
+<div class="paragraph">
+BabyBabelLM is a living resource, created, maintained, and updated by language communities.
+We welcome community contributions, in two different forms:
+            <br><br> 
+
+<ul style="margin-left: 20px;">
+
+        <li><b>Updating a dataset </b> for a language that is already included in BabyBabelLM, by adding, removing, or updating collected data.</li>
+        <br> 
+
+            The project's pipeline <a href="https://github.com/babylm-org/multilingual-babylm">(GitHub)</a> has built-in functionality for processing data in a standardized format, and updating or removing data from a HuggingFace BabyBabelLM repository for a language. To upload the resulting dataset, you can automatically create a <b>pull request</b> on the <a href="https://huggingface.co/collections/BabyLM-community/babybabellm-68be929326975fa8341efed9"> HuggingFace Hub</a> using the pipeline's corresponding commandline arguments. Afterwards, a member of BabyBabelLM will review and incorporate changes into the dataset. For more information please see the project's pipeline on Github. 
+            <br><br> 
+
+
+
+
+        <li><b>Creating a dataset </b> by adding data for a language not present in BabyBabelLM.</li>
+
+        <br> 
+        Please contact as, so we can first create the corresponding BabyBabelLM dataset for the language, which can then be updated by pull request like above. Contact can be made through opening an issue on the pipeline's <a href="">GitHub</a>.
+
+
+    </ul>
+</div>
+
+
+
+
+
+
     <div class="title"> Baseline Models and Evaluation </div> <br>
     <div class="paragraph">
         We train a set of monolingual and multilingual baseline models and evaluated them on a set of benchmarks.
