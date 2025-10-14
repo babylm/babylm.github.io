@@ -304,12 +304,21 @@ function createMarkers(data) {
             const marker = L.marker([lat, lng], { icon: markerIcon })
                 .addTo(map);
 
-            // Add text label near the marker
+            // Add text label near the marker (reduced gap and vertically centered)
+            const markerIconSize = Array.isArray(markerIcon && markerIcon.options && markerIcon.options.iconSize)
+                ? markerIcon.options.iconSize[0]
+                : 24; // fallback width if unavailable
+            const labelWidth = 120; // visual box width (CSS controls inner span)
+            const labelHeight = 20; // approximate visual height
+            const gapPx = 2; // tightened horizontal gap between point and label
+            const anchorX = -((markerIconSize / 2) + gapPx);
+            const anchorY = Math.round(labelHeight / 2);
+
             const textLabel = L.divIcon({
                 className: 'language-label',
                 html: `<span class="label-text">${getFirst(point, ['language', 'name', 'iso-639-3', 'iso_code']) || ''}</span>`,
-                iconSize: [120, 20],
-                iconAnchor: [-25, 0]
+                iconSize: [labelWidth, labelHeight],
+                iconAnchor: [anchorX, anchorY]
             });
 
             const labelMarker = L.marker([lat, lng], { icon: textLabel });
@@ -405,11 +414,11 @@ function showCORSError() {
             <div>
                 <i class="error-icon">🌐</i>
                 <h3 style="color: #e74c3c; margin-bottom: 1rem;">CORS Error</h3>
-                <p style="margin-bottom: 1rem;">由于浏览器安全限制，无法直接加载CSV文件。</p>
-                <p style="margin-bottom: 1rem;"><strong>解决方案：</strong></p>
-                <p style="margin-bottom: 0.5rem;">1. 运行本地服务器：<code>python3 -m http.server 8000</code></p>
-                <p style="margin-bottom: 1rem;">2. 然后访问：<code>http://localhost:8000</code></p>
-                <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #666;">正在加载示例数据...</p>
+                <p style="margin-bottom: 1rem;">Due to browser security restrictions, the CSV file cannot be loaded directly.</p>
+                <p style="margin-bottom: 1rem;"><strong>Solution:</strong></p>
+                <p style="margin-bottom: 0.5rem;">1. Run a local server: <code>python3 -m http.server 8000</code></p>
+                <p style="margin-bottom: 1rem;">2. Then visit: <code>http://localhost:8000</code></p>
+                <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #666;">Loading sample data...</p>
             </div>
         </div>
     `;

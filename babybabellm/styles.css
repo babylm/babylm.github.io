@@ -34,6 +34,18 @@ body {
   font-weight: bold;
 }
 
+.accent-gradient{
+  background: linear-gradient(90deg,
+    #f39c12 0%,
+    #27ae60 33%,
+    #2980b9 66%,
+    #8e44ad 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .people{
   column-count: 2; 
   padding-top: 20px;
@@ -102,7 +114,20 @@ affiliations sup {
   font-size: 40px;
   color: #0066ff;
   font-weight: bold;
+  /* Multilingual gradient styling */
+  background: linear-gradient(90deg,
+    #f39c12 25%,  /* orange */
+    #27ae60 50%,  /* green */
+    #2980b9 75%,  /* blue */
+    #8e44ad 100%  /* purple */
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* reveal gradient through text */
+  display: inline-block;
+  position: relative;
 }
+
 
 .nav-items {
     display: flex;
@@ -165,6 +190,22 @@ a:hover {
 #navbar {
   font-size: 20px;
   margin-top: 12px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: -3px; /* align with text baseline */
+}
+
+.icon-label {
+  margin-left: 6px;
+}
+
+.emoji-icon {
+  font-size: 18px;
+  line-height: 1;
+  vertical-align: -2px;
 }
 
 #title {
@@ -239,7 +280,7 @@ hr {
 .label-text {
     background: rgba(255, 255, 255, 0.9);
     color: #2c3e50;
-    padding: 3px 8px;
+    padding: 2px 6px; /* reduce internal padding to visually tighten spacing */
     border-radius: 12px;
     font-size: 11px;
     font-weight: 600;
