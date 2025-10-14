@@ -3,9 +3,23 @@ let map;
 let markers = [];
 let labelMarkers = [];
 let showLabels = true;
+let showLegend = true;
+
+let familyLegendControl;
+let legendContainer = null;
+let latestLegendEntries = [];
 
 // Cache of colors assigned per language family for stable coloring
 let familyColorMap = {};
+
+function escapeHtml(value) {
+    return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
 
 // Base palette used cyclically for new families
 const familyPalette = [
@@ -53,30 +67,29 @@ function initializeMap() {
         map.panInsideBounds(bounds, { animate: false });
     });
 
-    // Add label toggle control
-    removeStaleLabelControls();
+    // Add UI controls
+    removeStaleControls();
     addLabelToggleControl();
+    createFamilyLegendControl();
+    refreshFamilyLegend();
 }
 
-// Add a simple control to toggle labels on/off
+// Add simple controls to toggle labels and legend visibility
 function addLabelToggleControl() {
     const LabelControl = L.Control.extend({
         options: { position: 'topright' },
         onAdd: function () {
-            const container = L.DomUtil.create('div');
+            const container = L.DomUtil.create('div', 'map-toggle-control');
             container.style.cursor = 'pointer';
             container.style.userSelect = 'none';
-            container.style.background = 'transparent';
-            container.style.border = 'none';
-            container.style.borderRadius = '0';
-            container.style.padding = '0';
-            container.style.boxShadow = 'none';
-            container.style.fontSize = '12px';
-            container.style.color = '#333';
             container.innerHTML = `
-                <label style="display:flex; align-items:center; gap:6px; margin:0; background:none;">
-                    show labels
+                <label class="map-toggle">
+                    <span>show labels</span>
                     <input id="label-toggle" type="checkbox" ${showLabels ? 'checked' : ''}>
+                </label>
+                <label class="map-toggle">
+                    <span>show legend</span>
+                    <input id="legend-toggle" type="checkbox" ${showLegend ? 'checked' : ''}>
                 </label>
             `;
             // Prevent map drag when interacting with control
@@ -93,6 +106,13 @@ function addLabelToggleControl() {
                         });
                     });
                 }
+                const legendCheckbox = container.querySelector('#legend-toggle');
+                if (legendCheckbox) {
+                    legendCheckbox.addEventListener('change', (e) => {
+                        showLegend = e.target.checked;
+                        refreshFamilyLegend();
+                    });
+                }
             }, 0);
             return container;
         }
@@ -100,12 +120,71 @@ function addLabelToggleControl() {
     map.addControl(new LabelControl());
 }
 
-// Remove any old large legend-style label controls if present (from previous versions)
-function removeStaleLabelControls() {
+// Remove any old controls if present (from previous versions)
+function removeStaleControls() {
     try {
-        const stale = document.querySelectorAll('.legend-control');
+        const stale = document.querySelectorAll('.legend-control, .map-toggle-control, .language-legend');
         stale.forEach(el => el.parentNode && el.parentNode.removeChild(el));
     } catch (e) {}
+    legendContainer = null;
+    familyLegendControl = null;
+}
+
+function createFamilyLegendControl() {
+    if (familyLegendControl) {
+        try { map.removeControl(familyLegendControl); } catch (e) {}
+        familyLegendControl = null;
+    }
+
+    const LegendControl = L.Control.extend({
+        options: { position: 'bottomright' },
+        onAdd: function () {
+            const container = L.DomUtil.create('div', 'language-legend');
+            legendContainer = container;
+            L.DomEvent.disableScrollPropagation(container);
+            L.DomEvent.disableClickPropagation(container);
+            container.innerHTML = '';
+            return container;
+        }
+    });
+
+    familyLegendControl = new LegendControl();
+    map.addControl(familyLegendControl);
+}
+
+function refreshFamilyLegend(entries) {
+    if (entries) {
+        latestLegendEntries = entries;
+    }
+    if (!legendContainer) return;
+
+    legendContainer.style.display = showLegend ? 'block' : 'none';
+    if (!showLegend) {
+        return;
+    }
+
+    if (!latestLegendEntries || latestLegendEntries.length === 0) {
+        legendContainer.innerHTML = '<div class="legend-empty">No family data</div>';
+        return;
+    }
+
+    const itemsHtml = latestLegendEntries.map(entry => {
+        const color = familyColorMap[entry.key] || '#95a5a6';
+        const safeLabel = escapeHtml(entry.name || 'unknown');
+        return `
+            <div class="legend-item">
+                <span class="legend-swatch" style="background:${color};"></span>
+                <span class="legend-label">${safeLabel}</span>
+            </div>
+        `;
+    }).join('');
+
+    legendContainer.innerHTML = `
+        <div class="legend-title">language families</div>
+        <div class="legend-items">${itemsHtml}</div>
+    `;
+
+    legendContainer.setAttribute('role', 'group');
 }
 // Load and parse CSV data
 async function loadMapData() {
@@ -265,6 +344,8 @@ function createMarkers(data) {
         labelMarkers = [];
     }
 
+    const legendLookup = new Map();
+
     data.forEach(point => {
         // Keys are normalized to lowercase by parseCSV
         const latStr = getFirst(point, ['latitude', 'lat', 'wals_latitude']);
@@ -282,12 +363,17 @@ function createMarkers(data) {
             const family = getFirst(point, ['family', 'language_family', 'family_name']);
             let color = '#3498db';
             if (family) {
+                const rawLabel = String(family).trim();
                 const key = String(family).trim().toLowerCase();
                 if (!familyColorMap[key]) {
                     const idx = Object.keys(familyColorMap).length;
                     familyColorMap[key] = familyPalette[idx % familyPalette.length] || hashStringToColor(key);
                 }
                 color = familyColorMap[key];
+                if (!legendLookup.has(key)) {
+                    const display = rawLabel || 'unknown';
+                    legendLookup.set(key, { key, name: display.charAt(0).toUpperCase() + display.slice(1) });
+                }
             } else {
                 const rawColor = getFirst(point, ['color', 'family_color']);
                 if (isHexColor(rawColor)) {
@@ -363,6 +449,10 @@ function createMarkers(data) {
         const group = new L.featureGroup(markers);
         map.fitBounds(group.getBounds().pad(0.1));
     }
+
+    // Update legend with sorted entries
+    const entries = Array.from(legendLookup.values()).sort((a, b) => a.name.localeCompare(b.name));
+    refreshFamilyLegend(entries);
 }
 
 // Create custom marker icon

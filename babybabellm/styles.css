@@ -277,6 +277,109 @@ hr {
     height: 100%;
 }
 
+.map-toggle-control {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+    color: #2c3e50;
+    text-transform: lowercase;
+}
+
+.map-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+}
+
+.map-toggle input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.map-toggle span {
+    cursor: pointer;
+}
+
+.language-legend {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 5px 7px 6px;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+    max-width: 220px;
+    max-height: 90px;
+    font-size: 10px;
+    line-height: 1.35;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.legend-title {
+    font-weight: 600;
+    font-size: 10px;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.legend-items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3px 8px;
+    overflow-y: auto;
+    max-height: 58px;
+    padding-right: 2px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-width: 0;
+}
+
+.legend-swatch {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+}
+
+.legend-label {
+    flex: 1;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.legend-items::-webkit-scrollbar {
+    width: 5px;
+}
+
+.legend-items::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
+}
+
+.legend-items::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.legend-empty {
+    font-style: italic;
+    color: #7f8c8d;
+    padding: 4px 0;
+}
+
 .label-text {
     background: rgba(255, 255, 255, 0.9);
     color: #2c3e50;
