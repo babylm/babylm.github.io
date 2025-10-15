@@ -33,7 +33,7 @@ nor,Norwegian,x,,,x,x,,,Done,Tier 3 (1m),"404,960","496,473","901,433",0.449,DON
 nso,Sepedi (Northern Sotho),x,,,x,,Wikpedia (for padding)x,,Done,Tier 3 (1m),"214,672","871,565","1,086,237",0.198,DONE RE-PADDING (Francois & Faiz & Nikitas),605.82,60.58,6.06,6.06,1.1156964,-0.03%,30,correct,-24,29,Niger-Congo
 ron,Romanian,x,x,x,x,x,,,Done,Tier 3 (1m),"578,797","393,308","972,105",0.595,DONE RE-PADDING (Faiz),605.54,60.55,6.06,6.1,1.1151666,-0.74%,23,correct,46,25,Indo-European
 sot,Sesotho (Southern Sotho),x,,,x,x,Wikpedia (for padding)x,,Done,Tier 3 (1m),"214,672","785,966","1,000,638",0.215,DONE (Francois),633.2,63.32,6.33,6.31,1.1661078,0.35%,29,correct,-28,27,Niger-Congo
-tur,Turkish,x,,,x,x,,,Done,Tier 3 (1m),"259,590","405,478","665,068",0.39,DONE RE-PADDING (Faiz),567.15,56.72,5.67,5.72,1.0444815,-0.85%,39,correct,39,35,Altaic
+tur,Turkish,x,,,x,x,,,Done,Tier 3 (1m),"259,590","405,478","665,068",0.39,DONE RE-PADDING (Faiz),567.15,56.72,5.67,5.72,1.0444815,-0.85%,39,correct,39,35,Turkic
 rus,Russian,x,,,x,x,x,x,Done,Tier 3 (1m),"244,102","561,542","805,644",0.303,DONE RE-PADDING (Faiz),989.8,98.98,9.9,9.88,1.8228284,0.18%,43,Latin,56,38,Indo-European
 ace,Acehnese,x,,,,,,,Done,Tier 3 (1m),"242,613","725,581","968,194",0.251,DONE RE-PADDING (Faiz),674.4,67.44,6.74,6.74,1.2419926,0.06%,36,,5.5,95.5,Austronesian
 ban,Balinese,x,,,,,,,Done,Tier 3 (1m),"63,826","874,899","938,725",0.068,DONE RE-PADDING (Faiz),689.36,68.94,6.89,6.87,1.2695436,0.34%,35,,-8.333333333,115.25,Austronesian
@@ -44,3 +44,4 @@ min,Minangkabau,x,,,,,,,Done,Tier 3 (1m),"122,536","663,669","786,205",0.156,DON
 sun,Sundanese,x,,,,,,,Done,Tier 3 (1m),"17,441","874,647","892,088",0.02,DONE RE-PADDING (Faiz),595.66,59.57,5.96,5.96,1.0969809,-0.06%,33,,-7,107,Austronesian
 xho,isiXhosa,x,,,x,,Wikpedia (for padding)x,,Done,Tier 3 (1m),"291,743","387,662","679,405",0.429,DONE (Francois),651,65.1,6.51,6.52,1.198886,-0.15%,27,,-32,27,Niger-Congo
 zul,isiZulu,x,,,x,,Wikpedia (for padding)x,,Done,Tier 3 (1m),"221,198","532,402","753,600",0.294,DONE (Francois),632.02,63.2,6.32,6.31,1.1639372,0.16%,28,,-30,30,Niger-Congo
+
