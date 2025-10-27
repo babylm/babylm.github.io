@@ -86,7 +86,7 @@
 
   .schedule-list li {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: auto  1fr;
     align-items: baseline;
     gap: 1rem;
     padding: 0.01rem 0; /* tightened spacing */
@@ -101,7 +101,8 @@
   .time {
     font-weight: 500;
     color: #666;
-    text-align: right;
+    text-align: left;                 /* was right */
+    justify-self: start;  
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
