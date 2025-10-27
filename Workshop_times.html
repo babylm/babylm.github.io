@@ -1,109 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BabyLM Challenge – Workshop Schedule 2025</title>
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="icon" href="./images/pacifier.png">
+  <style>
+    :root {
+      --ink:#222; --muted:#666; --bg:#fafafa; --rule:#eee;
+    }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; margin: 0; color: var(--ink); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 1.25rem; }
+    .masthead { display:flex; align-items:center; gap: 1rem; flex-wrap:wrap; }
+    .masthead img { height:80px; }
+    .master-title { font-size: 2rem; font-weight:700; }
+    .subheader { color: var(--muted); margin-top:-0.25rem; }
+    #navbar { border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); margin: 1rem 0; }
+    #navbar h4 { font-weight:600; color:var(--ink); }
+    #navbar a { color:inherit; text-decoration:none; }
+    #navbar a:hover { text-decoration:underline; }
 
+    .schedule { max-width: 760px; margin: 2rem auto; }
+    .schedule h2 { font-size: 1.6rem; margin: 0 0 .25rem 0; }
+    .schedule .date { color: var(--muted); margin: 0 0 1.25rem 0; font-weight:500; }
+
+    .session-list { list-style:none; padding:0; margin:0; display:grid; gap:.25rem; }
+    .session { display:grid; grid-template-columns: 160px 1fr; gap: 1rem; align-items: start; padding:.5rem .25rem; border-radius: .5rem; }
+    .session .time { font-weight:600; color: var(--muted); text-align:right; font-variant-numeric: tabular-nums; white-space:nowrap; }
+    .session .title { font-weight:600; color: var(--ink); }
+    .session.note { background: var(--bg); }
+
+    .papers { list-style: none; padding: .25rem 0 0 0; margin:.25rem 0 0 0; border-left: 2px solid var(--rule); }
+    .papers li { padding:.3rem .5rem .3rem .75rem; }
+    .paper-title { font-weight:600; }
+    .authors { color: var(--muted); }
+
+    @media (max-width: 700px) {
+      .session { grid-template-columns: 1fr; }
+      .session .time { text-align:left; }
+    }
+
+    .footer { height: 40px; }
+  </style>
 </head>
-
 <body>
+  <div class="wrap">
+    <header class="masthead">
+      <img src="./images/pacifier.png" alt="BabyLM pacifier logo" />
+      <div>
+        <div class="master-title"><b>Baby</b>LM Challenge</div>
+        <div class="subheader">Sample-efficient pretraining on a developmentally plausible corpus</div>
+      </div>
+    </header>
 
-<div style="display:inline">
- <img style="float: left; padding-right: 20px;" src="./images/pacifier.png" height="80"> 
- <div class="master-title"> <b>Baby</b>LM Challenge </div> 
- <div class="subheader"> Sample-efficient pretraining on a developmentally plausible corpus </div> 
-</div>
+    <nav id="navbar" aria-label="Primary">
+      <h4>
+        <a href="index.html">Overview</a> •
+        <a href="Workshop_times.html">Workshop Schedule</a> •
+        <a href="guidelines.html">Guidelines</a> •
+        <a href="timeline.html">Timeline</a> •
+        <a href="faqs.html">FAQs</a> •
+        <a href="papers.html">Previous papers</a>
+        <hr>
+      </h4>
+    </nav>
 
+    <section class="schedule" aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading">Workshop Schedule 2025</h2>
+      <p class="date">Saturday, November 8, 2025</p>
 
-<div id="navbar">
-<h4> <a href="index.html"> Overview </a> • <a href="Workshop_times.html"> Workshop Schedule </a>  • <a href="guidelines.html"> Guidelines </a> • <a href="timeline.html"> Timeline</a> • <a href="faqs.html"> FAQs </a>• <a href="papers.html"> Previous papers </a> <hr> </h4> 
-</div>
-  <section class="schedule" aria-labelledby="schedule-heading">
-  <h2 id="schedule-heading">Workshop Schedule 2025</h2>
+      <ul class="session-list">
+        <li class="session">
+          <span class="time">09:00–09:15</span>
+          <div>
+            <div class="title">Opening Remarks</div>
+          </div>
+        </li>
 
-  <ul class="schedule-list">
-    <li><span class="time">9:00–10:00&nbsp;am</span><span class="title">Intro + Shared Task Oral Presentations</span></li>
-    <li><span class="time">10:00–10:30&nbsp;am</span><span class="title">Workshop Orals 1</span></li>
-    <li><span class="time">10:30–11:00&nbsp;am</span><span class="title">Break</span></li>
-    <li><span class="time">11:00–12:00&nbsp;pm</span><span class="title">Keynote 1</span></li>
-    <li><span class="time">12:00–2:00&nbsp;pm</span><span class="title">Lunch</span></li>
-    <li><span class="time">2:00–3:30&nbsp;pm</span><span class="title">Poster Session</span></li>
-    <li><span class="time">3:30–4:00&nbsp;pm</span><span class="title">Break</span></li>
-    <li><span class="time">4:00–5:00&nbsp;pm</span><span class="title">Keynote 2</span></li>
-    <li><span class="time">5:00–5:30&nbsp;pm</span><span class="title">Workshop Orals 2</span></li>
-    <li><span class="time">5:30–5:35&nbsp;pm</span><span class="title">Closing Session / Awards</span></li>
-  </ul>
-</section>
+        <li class="session">
+          <span class="time">09:15–10:15</span>
+          <div>
+            <div class="title">BabyLM Challenge Orals</div>
+            <ul class="papers">
+              <li>
+                <div class="paper-title">CLASS-IT: Conversational and Lecture-Aligned Small-Scale Instruction Tuning for BabyLMs</div>
+                <div class="authors">Luca Capone, Alessandro Bondielli, Alessandro Lenci</div>
+              </li>
+              <li>
+                <div class="paper-title">Masked Diffusion Language Models with Frequency-Informed Training</div>
+                <div class="authors">Despoina Kosmopoulou, Efthymios Georgiou, Vaggelis Dorovatas, Georgios Paraskevopoulos, Alexandros Potamianos</div>
+              </li>
+              <li>
+                <div class="paper-title">MoEP: Modular Expert Paths for Sample-Efficient Language Modeling</div>
+                <div class="authors">Joonas Tapaninaho</div>
+              </li>
+              <li>
+                <div class="paper-title">Mask and You Shall Receive: Optimizing Masked Language Modeling for Pretraining BabyLMs</div>
+                <div class="authors">Lukas Edman, Alexander Fraser</div>
+              </li>
+              <li>
+                <div class="paper-title">Once Upon a Time: Interactive Learning for Storytelling with Small Language Models</div>
+                <div class="authors">Jonas Mayer Martins, Ali Hamza Bashir, Muhammad Rehan Khalid, Lisa Beinborn</div>
+              </li>
+            </ul>
+          </div>
+        </li>
 
-<style>
-  .schedule {
-    max-width: 640px;
-    margin: 2rem auto;
-    font-family: system-ui, sans-serif;
-  }
+        <li class="session note">
+          <span class="time">10:15–11:00</span>
+          <div>
+            <div class="title">Break</div>
+          </div>
+        </li>
 
-  .schedule h2 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #222;
-  }
+        <li class="session">
+          <span class="time">11:00–12:00</span>
+          <div>
+            <div class="title">Invited Talk 1: Hai Hu</div>
+          </div>
+        </li>
 
-  .schedule-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+        <li class="session note">
+          <span class="time">12:00–13:30</span>
+          <div>
+            <div class="title">Lunch</div>
+          </div>
+        </li>
 
-  .schedule-list li {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    align-items: baseline;
-    gap: 1rem;
-    padding: 0.01rem 0; /* tightened spacing */
-    border: none !important; /* kill inherited borders */
-  }
+        <li class="session">
+          <span class="time">13:30–15:00</span>
+          <div>
+            <div class="title">Poster Session</div>
+          </div>
+        </li>
 
-  .schedule-list li * {
-    border: none !important;           /* remove dotted or solid lines */
-    text-decoration: none !important;  /* remove link-style underlines */
-  }
+        <li class="session note">
+          <span class="time">15:00–15:30</span>
+          <div>
+            <div class="title">Break</div>
+          </div>
+        </li>
 
-  .time {
-    font-weight: 500;
-    color: #666;
-    text-align: right;
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
-  }
+        <li class="session">
+          <span class="time">15:30–16:30</span>
+          <div>
+            <div class="title">Invited Talk 2: Yohei Oseki</div>
+          </div>
+        </li>
 
-  .title {
-    color: #222;
-    font-weight: 500;
-  }
+        <li class="session">
+          <span class="time">16:30–17:05</span>
+          <div>
+            <div class="title">BabyLM Workshop Orals</div>
+            <ul class="papers">
+              <li>
+                <div class="paper-title">Teacher Demonstrations in a BabyLM’s Zone of Proximal Development for Contingent Multi-Turn Interaction</div>
+                <div class="authors">Suchir Salhan, Hongyi Gu, Donya Rooein, Diana Galvan-Sosa, Gabrielle Gaudeau, Andrew Caines, Zheng Yuan, Paula Buttery</div>
+              </li>
+              <li>
+                <div class="paper-title">Are BabyLMs Deaf to Gricean Maxims? A Pragmatic Evaluation of Sample-Efficient Language Models</div>
+                <div class="authors">Raha Askari, Sina Zarrieß, Özge Alacam, Judith Sieker</div>
+              </li>
+              <li>
+                <div class="paper-title">Looking to Learn: Token-wise Dynamic Gating for Low-Resource Vision-Language Modelling</div>
+                <div class="authors">Bianca-Mihaela Ganescu, Suchir Salhan, Andrew Caines, Paula Buttery</div>
+              </li>
+            </ul>
+          </div>
+        </li>
 
-  .schedule-list li:nth-child(5),
-  .schedule-list li:nth-child(6) {
-    background-color: #fafafa;
-  }
+        <li class="session">
+          <span class="time">17:05–17:15</span>
+          <div>
+            <div class="title">Awards and Closing Remarks</div>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-  @media (max-width: 600px) {
-    .schedule-list li {
-      grid-template-columns: 1fr;
-      gap: 0.2rem;
-      padding: 0.5rem 0;
-    }
-
-    .time {
-      text-align: left;
-    }
-  }
-</style>
-
-
-<div class="footer">
-</div>
-
-
+    <div class="footer"></div>
+  </div>
 </body>
-
+</html>
