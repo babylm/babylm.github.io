@@ -57,6 +57,16 @@
 
     <li><span class="time">11:00-12:00&nbsp;</span><span class="title">Invited Talk 1: Hai Hu</span></li>
 
+
+
+    <div class="talk-title">Benchmarking Baby and Large Language Models in Chinese</div>
+    <details class="abstract">
+      <summary>Abstract</summary>
+      <p>
+      In this talk, I will first briefly overview the efforts in creating linguistically oriented benchmarks in Chinese. I will discuss the design and construction of benchmarks targeting the orthography, phonology, syntax, logic and semantics, pragmatics and world knowledge of modern and classical Chinese, by our lab and other teams in the field. The evaluations of baby and large language models show that current LLMs are very powerful, especially with the addition of “reasoning” abilities. However, certain linguistic blind spots remain, and further refinement of evaluation tasks and methodologies is needed. Next, I will discuss ongoing studies in understanding the learning mechanisms of monolingual and bilingual language models involving Chinese. Finally, I will point out what the LM community might learn from the language acquisition community.
+      </p>
+    </details>
+    
     <li><span class="time">12:00-13:30&nbsp;</span><span class="title">Lunch</span></li>
 
     <li><span class="time">13:30-15:00&nbsp;</span><span class="title">Poster Session</span></li>
@@ -64,6 +74,15 @@
     <li><span class="time">15:00-15:30&nbsp;</span><span class="title">Break</span></li>
 
     <li><span class="time">15:30-16:30&nbsp;</span><span class="title">Invited Talk 2: Yohei Oseki</span></li>
+
+    
+    <div class="talk-title">Small Language Models through Insights from Human Language Acquisition</div>
+    <details class="abstract">
+      <summary>Abstract</summary>
+      <p>
+      Large language models (LLMs) have achieved remarkable success, thanks to the rapid development of AI and machine/deep learning, and outperformed humans at various downstream tasks. However, those LLMs, despite their super-human performance, have been pointed out as not efficient in terms of training data, model parameters, and computational resources. In this talk, I propose small language models (SLMs) that efficiently learn natural language like humans, building on insights from human language acquisition. Specifically, SLMs are trained on developmentally plausible corpora like BabyLM Challenge via curriculum learning, batch learning, direct/indirect evidence, variation set, and critical period. The results suggest that inductive biases are essential to efficiently train SLMs, with scientific implications for human language acquisition, as well as engineering applications to edge AI and low-resource languages.
+      </p>
+    </details>
 
     <li>
       <span class="time">16:30-17:05&nbsp;</span>
@@ -165,6 +184,66 @@
   .schedule-list li:nth-child(6) {
     background-color: #fafafa;
   }
+  .schedule-list li.talk {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-top: 1px solid #eee !important;
+}
+.slot {
+  display: grid;
+  gap: 0.35rem;
+}
+.slot-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.8rem;
+  align-items: baseline;
+}
+.slot-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  color: #555;
+  background: #f3f4f6;
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+}
+.speaker {
+  font-weight: 500;
+  color: #333;
+}
+.talk-title {
+  font-weight: 650;
+  color: #111;
+  line-height: 1.35;
+}
+.abstract {
+  border-left: 3px solid #e5e7eb;
+  padding-left: 0.8rem;
+}
+.abstract > summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: #444;
+  list-style: none;
+}
+.abstract > summary::-webkit-details-marker { display: none; }
+.abstract > summary::after {
+  content: " ▾";
+  font-weight: 400;
+}
+.abstract[open] > summary::after { content: " ▴"; }
+.abstract p {
+  margin: 0.4rem 0 0;
+  color: #333;
+}
+@media (max-width: 1200px) {
+  .schedule-list li.talk { grid-template-columns: 1fr; }
+}
+
 
   @media (max-width: 1200px) {
     .schedule-list li {
