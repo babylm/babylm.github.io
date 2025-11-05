@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+  <meta name="google-site-verification" content="uGXw8B5MkU92VZio-qMGqDxvDPk9t5WuvJPCuMmwuA8"/>
+  <link rel="icon" href="./images/pacifier.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BabyLM Posters</title>
+</head>
+<body>
+
+<div style="display:inline">
+ <img style="float: left; padding-right: 20px;" src="./images/pacifier.png" height="80"> 
+ <div class="master-title"> <b>Baby</b>LM Challenge </div> 
+ <div class="subheader"> Sample-efficient pretraining on a developmentally plausible corpus </div> 
+</div>
+
+<div id="navbar">
+<h4> 
+  <a href="index.html"> Overview </a> • 
+  <a href="Workshop_times.html"> Workshop Schedule </a> • 
+  <a href="guidelines.html"> Guidelines </a> • 
+  <a href="timeline.html"> Timeline</a> • 
+  <a href="faqs.html"> FAQs </a>• 
+  <a href="papers.html"> Previous papers </a> • 
+  <b>Posters</b>
+  <hr> 
+</h4> 
+</div>
+
+<div class="greybox">
+
+  <div class="title"> Posters </div> <br>
+  <div class="paragraph">
+    Browse all uploaded posters below. This page lists every file inside <code>/Posters/</code> (PDFs and images). Click a title to open it in a new tab.
+  </div>
+
+  <div class="paragraph" id="controls">
+    <input id="search" type="text" placeholder="Filter by filename (e.g., author, title, year) …" style="max-width:420px; padding:8px; border:1px solid #ddd; border-radius:8px;">
+  </div>
+
+  <div id="list">
+    <div class="paragraph">Loading posters…</div>
+  </div>
+
+  <noscript>
+    <div class="paragraph">
+      JavaScript is required to render the poster list. Please enable JavaScript.
+    </div>
+  </noscript>
+
+</div>
+
+<div class="footer">
+  <div style="float:right;"> Images provided by Smashicons </div>
+</div>
+
+<script>
+(async function () {
+  const VALID = [".pdf",".png",".jpg",".jpeg",".webp",".svg"];
+  function isValid(p){ return VALID.some(e => p.toLowerCase().endsWith(e)); }
+  function fileName(p){ return p.split('/').pop(); }
+
+  let files = [];
+  try {
+    const res = await fetch('posters.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('Could not fetch posters.json');
+    files = (await res.json()).filter(isValid);
+  } catch (e) {
+    const list = document.getElementById('list');
+    list.innerHTML = '';
+    const d = document.createElement('div');
+    d.className = 'paragraph';
+    d.textContent = 'Error loading posters.json. Make sure it exists at the site root.';
+    list.appendChild(d);
+    return;
+  }
+
+  const list = document.getElementById('list');
+  const search = document.getElementById('search');
+
+  function render(q='') {
+    const ql = q.trim().toLowerCase();
+    const filtered = files.filter(p => p.toLowerCase().includes(ql));
+    list.innerHTML = '';
+    if (filtered.length === 0) {
+      const d = document.createElement('div');
+      d.className = 'paragraph';
+      d.textContent = 'No posters match your search.';
+      list.appendChild(d);
+      return;
+    }
+    // Render as bullets, using site's existing styles
+    for (const rel of filtered) {
+      const row = document.createElement('div');
+      row.className = 'bullet';
+      const a = document.createElement('a');
+      a.href = rel;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = fileName(rel);
+      row.appendChild(a);
+      list.appendChild(row);
+    }
+  }
+
+  search.addEventListener('input', () => render(search.value));
+  render();
+})();
+</script>
+
+</body>
+</html>
