@@ -22,20 +22,27 @@
 
 <div class="greybox">
 
-<div class="paragraph"> <b> Summary: </b> The 3rd BabyLM Challenge will be held as a workshop for EMNLP 2025! The overarching goals of the challenge remain the same, however, some of the rules are different for this year. See below for an overview of rules updates. </div>
+<div class="paragraph"> <b> Summary: </b> BabyLM returns for its <b>4th year</b> as both a shared task and a workshop at <b>EMNLP 2026</b>. This round keeps the core goal: sample-efficient pretraining under human-scale data budgets—while updating the track structure and datasets. </div>
 
 <div class="bullet"> • All data is available <a href="https://osf.io/ryjfm/"><u>at this OSF directory!</u></a> Data includes:</div> 
 
-<div class="bullet"> &#8594; A 100M and 10M word text-only dataset, with higher proportion child and child-directed speech.</a></div>
+<div class="bullet"> &#8594; A <b>detoxified</b> 100M-word <b>STRICT</b> dataset and a detoxified 10M-word <b>STRICT-SMALL</b> dataset.</a></div>
 
-<div class="bullet"> &#8594; A <b> multimodal dataset </b> with 50M words of paired text-image data, and 50M words text-only data. </div>
+<div class="bullet"> &#8594; A new <b>MULTILINGUAL</b> track based on <b>BabyBabelLM</b>, with evaluation focusing on <b>English, Dutch, and Chinese</b>. </div>
 
 <!-- <div class="bullet"> • The evaluation pipeline is out <a href="https://github.com/babylm/evaluation-pipeline-2024">here</a>! </div> -->
-<div class="paragraph"> <b> New track: Interactivity </b> The INTERACTION track debuts this year to allow for interaction between multiple agents during training.</div>
+<div class="paragraph">
+    <b>Track update:</b> This year introduces a dedicated <b>MULTILINGUAL</b> track, and removes <b>MULTIMODAL</b> and <b>INTERACTION</b>
+    as standalone competition tracks—both are now subsumed into <b>STRICT</b> / <b>STRICT-SMALL</b> (paired image-text data and teacher-model feedback are allowed).
+  </div>
 
-<div class="paragraph"> <b>The evaluation pipeline is released!</b> You can find it at this <a href="https://github.com/babylm/evaluation-pipeline-2025">GitHub repository</a>.</div>
-  
-<div class="paragraph"> See the <a href="guidelines.html">guidelines</a> for an overview of submission tracks and pretraining data. See the <a href="https://arxiv.org/pdf/2502.10645">updated call for papers</a> for a detailed description of the task setup and data. </div>
+  <div class="paragraph">
+    <b>Evaluation pipeline:</b> We will distribute an open-source pipeline building on the 2025 repository; the MULTILINGUAL track will be evaluated with a mix of zero-shot and finetuning-based tasks across English, Dutch, and Chinese. (Pipeline/baselines are planned for <b>early April</b>.)
+  </div>
+
+  <div class="paragraph">
+    See the <a href="guidelines.html">guidelines</a> for an overview of submission tracks and pretraining data. See the updated call for papers for the full task setup, track rules, and dataset details.
+  </div>
 
 <div class="paragraph"> Consider <a href="https://join.slack.com/t/babylmchallenge/shared_invite/zt-3gqtr0fat-Mi4M4eFcszrcakz2Vyj41g">joining the BabyLM Slack</a> if you have any questions for the organizers or want to connect with other participants!</div>
 
@@ -50,24 +57,28 @@
 </ol>
   Paper submission follows CoNLL template with 4-8 pages, as well as a hyperparameter <a href="https://forms.gle/nRjdt5w5rCoFFqnJ6"> form </a>. -->
 <div class="title"> Submission Links </div> <br>
-<div class="bullet"> • If you're submitting a workshop paper (not to the shared task), please submit at <a href="https://openreview.net/group?id=EMNLP/2025/Workshop/BabyLM">this OpenReview link</a>. <b>Deadline: August 15</b> (midnight AoE) </div>
+<div class="paragraph">
+  Submissions will be accepted <b>via ACL Rolling Review (ARR)</b> or <b>directly through OpenReview</b>. Official OpenReview portal links will be posted on this site once they are live.
+</div>
+<!-- <div class="bullet"> • If you're submitting a workshop paper (not to the shared task), please submit at <a href="https://openreview.net/group?id=EMNLP/2025/Workshop/BabyLM">this OpenReview link</a>. <b>Deadline: August 15</b> (midnight AoE) </div>
 <div class="bullet"> • If you're submitting a shared task report for the BabyLM Challenge, please submit at <a href="https://openreview.net/group?id=EMNLP/2025/Workshop/BabyLM_Challenge">this OpenReview link</a>. <b>Deadline: August 17</b> (midnight AoE) </div>
-<div class="bullet"> • If you're committing a paper with reviews from ARR, please submit at <a href="https://openreview.net/group?id=EMNLP/2025/Workshop/BabyLM_ARR_Commitment">this OpenReview link</a>. <b>Deadline: September 5</b> (midnight AoE) </div>
+<div class="bullet"> • If you're committing a paper with reviews from ARR, please submit at <a href="https://openreview.net/group?id=EMNLP/2025/Workshop/BabyLM_ARR_Commitment">this OpenReview link</a>. <b>Deadline: September 5</b> (midnight AoE) </div> -->
 
 
-<div class="title"> Rules Updates for BabyLM Round 3 </div> <br>
+<div class="title"> Updated Rules for BabyLM Round 4 </div> <br>
 
-<div class="bullet"> • We introduce a new Interaction track,</b> exploring how feedback and interaction can assist with sample-efficient language modeling. This track will allow pre-trained language models to serve as teacher models; however, student models are still required to train on 100 million words or less. </a></div>
+<div class="bullet"> • <b>New track: MULTILINGUAL.</b> Participants train on a multilingual mixture from <b>BABYBABELLM</b>. The challenge track focuses on <b>English, Dutch, and Chinese</b>, and allows a custom mixture totaling <b>100M tokens</b> (with word counts adjusted by each language’s Byte Premium in baseline construction).</div>
 
-<div class="bullet"> • Last year, we encouraged multi-modal submissions, <b> by introducing a vision-language track. We continue the track this year. </b> For both text-only and multimodal tracks, participants are free to construct their own datasets, provided that they stay within the 100M or 10M word budget.</a></div>
-
-<div class="bullet"> • To encourage contributions that are related to the goals of the challenge but do not involve direct competition entries, <b> we allow submissions to the workshop.</b> This could include things like novel cognitively-inspired evaluation metrics or in-depth analyses of one particular BabyLM model. </a></div>
-
-<div class="bullet"> • This year, we will impose additional compute limitations on all challenge tracks.
-Models may not conduct more than 10 epochs over their training data. See the call for papers for more details. </a></div>
+<div class="bullet"> • <b>Track restructuring:</b> Dedicated <b>MULTIMODAL</b> and <b>INTERACTION</b> competition tracks have been removed. Instead, participants may use paired image-text data and/or leverage feedback from a teacher model during training or <b>STRICT</b> or <b>STRICT-SMALL</b>.
 </div>
 
+<div class="bullet"> • <b>Updated (detoxified) datasets:</b> We release a modified detoxified training dataset, including: <b>100M word STRICT</b>, <b>10M word STRICT-SMALL</b>, and <b>100M word + image MULTIMODAL</b>.
+</div>
 
+<div class="bullet"> • <b>Compute/epochs limit remains:</b> Competition entries may not conduct more than <b>10 epochs</b> over their training data (this restriction applies to competition entries; workshop-only papers are not required to follow it).
+</div>
+
+</div>
 
 <div class="title"> Overview </div> <br>
   
@@ -79,28 +90,24 @@ Models may not conduct more than 10 epochs over their training data. See the cal
 
 <div class="title" > Why <100 Million Words? </div>
   
-<div class="paragraph"> Focusing on scaled-down pretraining has several potential benefits: <br> First, small-scale pretraining can be a sandbox for developing novel techniques for improving data efficiency. These techniques have the potential to then scale up to larger scales commonly seen in applied NLP or used to enhance current approaches to modeling low-resource languages. Second, improving our ability to train LMs on the same kinds and quantities of data that humans learn from hopefully will give us greater access to plausible cognitive models of humans and help us understand what allows humans to acquire language so efficiently. </div>
+<div class="paragraph"> Focusing on scaled-down pretraining has several potential benefits: <br> First, small-scale pretraining can be a sandbox for developing novel techniques for improving data efficiency. These techniques have the potential to then scale up to larger scales commonly seen in applied NLP or used to enhance current approaches to modeling low-resource languages. Second, improving our ability to train LMs on the same kinds and quantities of data that humans learn from, hopefully, will give us greater access to plausible cognitive models of humans and help us understand what allows humans to acquire language so efficiently. </div>
 
 <div class="title"> Organization Team </div>
 <div class = "people">
-<div class="bullet">• Lucas Charpentier (LTG, University of Oslo) </div> 
 <div class="bullet">• Leshem Choshen (IBM Research, MIT) </div> 
 <div class="bullet">• Ryan Cotterell (ETH Zurich) </div> 
 <div class="bullet">• Mustafa Omer Gul (Cornell University) </div> 
-<div class="bullet">• Michael Hu (NYU) </div> 
-<div class="bullet">• Jing Liu (ENS-PSL) </div> 
 <div class="bullet">• Jaap Jumelet (University of Groningen) </div> 
 <div class="bullet">• Tal Linzen (NYU) </div>
-<div class="bullet">• Aaron Mueller (Northeastern) </div> 
-<div class="bullet">• Candace Ross (Meta AI) </div> 
+<div class="bullet">• Aaron Mueller (Boston University) </div> 
+<div class="bullet">• Suchir Salhan (University of Cambridge) </div> 
 <div class="bullet">• Raj Sanjay Shah (Georgia Institute of Technology) </div> 
 <div class="bullet">• Alex Warstadt (UCSD) </div> 
 <div class="bullet">• Ethan Wilcox (Georgetown) </div> 
-<div class="bullet">• Adina Williams (Meta AI) </div> 
 </div>
 
 <br>
-The BabyLM Challenge was held in 2023 and 2024 as a shared task. At the following link, you can find the <a href="https://arxiv.org/abs/2404.06214"> last year's call for papers </a>  </a>.
+The BabyLM Challenge was previously held as a shared task (2023-2025) and a workshop (2025). At the following link, you can find the <a href="https://babylm.github.io/papers.html"> last year's call for papers </a>  </a>.
 
 
 </div>
