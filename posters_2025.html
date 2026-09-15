@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+  <meta name="google-site-verification" content="uGXw8B5MkU92VZio-qMGqDxvDPk9t5WuvJPCuMmwuA8"/>
+  <link rel="icon" href="./images/pacifier.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BabyLM 3 (2025) — Posters</title>
+</head>
+<body>
+
+<div style="display:inline">
+ <img style="float: left; padding-right: 20px;" src="./images/pacifier.png" height="80"> 
+ <div class="master-title"> <b>Baby</b>LM Challenge </div> 
+ <div class="subheader"> Sample-efficient pretraining on a developmentally plausible corpus </div> 
+</div>
+
+<div id="navbar">
+  <h4>
+    <a href="index.html">Overview</a> •
+    <a href="Workshop_times.html">Workshop Schedule</a> •
+    <a href="guidelines.html">Guidelines</a> •
+    <a href="timeline.html">Timeline</a> •
+    <a href="faqs.html">FAQs</a> •
+    <a href="papers.html">Previous Papers</a>
+    <hr>
+  </h4>
+</div>
+
+<div class="greybox">
+
+  <h1 class="title">BabyLM 3 Posters (2025)</h1>
+  <div class="paragraph">
+    Browse posters from BabyLM 3 at EMNLP 2025. Click a title to open the poster in a new tab.
+    <a href="papers.html#babylm-3">Back to the BabyLM 3 archive</a>.
+  </div>
+
+  <div class="paragraph" id="controls">
+    <label for="search">Filter posters</label><br>
+    <input id="search" type="search" placeholder="Search poster titles…" style="box-sizing:border-box; width:100%; max-width:420px; padding:8px; border:1px solid #ddd; border-radius:8px;">
+  </div>
+
+  <div id="list">
+    <div class="paragraph">Loading posters…</div>
+  </div>
+
+  <noscript>
+    <div class="paragraph">
+      JavaScript is required to render the poster list. Please enable JavaScript.
+    </div>
+  </noscript>
+
+</div>
+
+<div class="footer">
+  <div style="float:right;"> Images provided by Smashicons </div>
+</div>
+
+<script>
+(async function () {
+  const VALID = [".pdf",".png",".jpg",".jpeg",".webp",".svg"];
+  function isValid(p){ return VALID.some(e => p.toLowerCase().endsWith(e)); }
+  function fileName(p){ return p.split('/').pop(); }
+
+  let files = [];
+  try {
+    const res = await fetch('posters_2025.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('Could not fetch the poster archive');
+    files = (await res.json()).filter(isValid);
+  } catch (e) {
+    const list = document.getElementById('list');
+    list.innerHTML = '';
+    const d = document.createElement('div');
+    d.className = 'paragraph';
+    d.textContent = 'The poster archive could not be loaded. Please try again later.';
+    list.appendChild(d);
+    return;
+  }
+
+  const list = document.getElementById('list');
+  const search = document.getElementById('search');
+
+  function render(q='') {
+    const ql = q.trim().toLowerCase();
+    const filtered = files.filter(p => p.toLowerCase().includes(ql));
+    list.innerHTML = '';
+    if (filtered.length === 0) {
+      const d = document.createElement('div');
+      d.className = 'paragraph';
+      d.textContent = 'No posters match your search.';
+      list.appendChild(d);
+      return;
+    }
+    // Render as bullets, using site's existing styles
+    for (const rel of filtered) {
+      const row = document.createElement('div');
+      row.className = 'bullet';
+      const a = document.createElement('a');
+      a.href = rel;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = fileName(rel);
+      row.appendChild(a);
+      list.appendChild(row);
+    }
+  }
+
+  search.addEventListener('input', () => render(search.value));
+  render();
+})();
+</script>
+
+</body>
+</html>

@@ -1,9 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BabyLM 4 at EMNLP 2026 — Tentative Workshop Schedule</title>
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="icon" href="./images/pacifier.png">
 
+  <style>
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      padding: 12px 16px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .schedule-table thead {
+      background-color: #e0e0e0;
+    }
+
+    .schedule-table tbody th {
+      width: 1%;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      font-weight: normal;
+    }
+
+    .schedule-note {
+      padding: 12px 16px;
+      background-color: #f5f5f5;
+      border-left: 3px solid #0066ff;
+    }
+  </style>
 </head>
 
 <body>
@@ -16,243 +51,80 @@
 
 
 <div id="navbar">
-<h4> <a href="index.html"> Overview </a> • <a href="Workshop_times.html"> Workshop Schedule </a> • <a href="posters.html"> Posters </a> • <a href="guidelines.html"> Guidelines </a> • <a href="timeline.html"> Timeline</a> • <a href="faqs.html"> FAQs </a>• <a href="papers.html"> Previous papers </a> <hr> </h4> 
-</div>
-  2026 TBD
-<!-- 
-  <section class="schedule" aria-labelledby="schedule-heading">
-  <h2 id="schedule-heading">Workshop Schedule 2025 · Saturday, November 8</h2>
-
-  <ul class="schedule-list">
-    <li><span class="time">09:00-09:15&nbsp;</span><span class="title">Opening Remarks</span></li>
-
-    <li>
-      <span class="time">09:15-10:15&nbsp;</span>
-      <span class="title">
-        BabyLM Challenge Orals
-        <span class="papers">
-          <div class="paper-entry">
-            <span class="paper-title">CLASS-IT: Conversational and Lecture-Aligned Small-Scale Instruction Tuning for BabyLMs</span>
-            <span class="paper-authors">Luca Capone, Alessandro Bondielli, Alessandro Lenci</span>
-          </div>
-          <div class="paper-entry">
-            <span class="paper-title">Masked Diffusion Language Models with Frequency-Informed Training</span>
-            <span class="paper-authors">Despoina Kosmopoulou, Efthymios Georgiou, Vaggelis Dorovatas, Georgios Paraskevopoulos, Alexandros Potamianos</span>
-          </div>
-          <div class="paper-entry">
-            <span class="paper-title">MoEP: Modular Expert Paths for Sample-Efficient Language Modeling</span>
-            <span class="paper-authors">Joonas Tapaninaho</span>
-          </div>
-          <div class="paper-entry">
-            <span class="paper-title">Mask and You Shall Receive: Optimizing Masked Language Modeling for Pre-training BabyLMs</span>
-            <span class="paper-authors">Lukas Edman, Alexander Fraser</span>
-          </div>
-          <div class="paper-entry">
-            <span class="paper-title"> Once Upon a Time: Interactive Learning for Storytelling with Small Language Models</span>
-            <span class="paper-authors">Jonas Mayer Martins, Ali Hamza Bashir, Muhammad Rehan Khalid, Lisa Beinborn</span>
-          </div>
-        </span>
-      </span>
-    </li>
-
-    <li><span class="time">10:15-11:00&nbsp;</span><span class="title">Break</span></li>
-
-    <li><span class="time">11:00-12:00&nbsp;</span><span class="title">Invited Talk 1: Hai Hu - Benchmarking Baby and Large Language Models in Chinese</span></li>
-    <div class="abstract static-abstract">
-     <div class="abstract-label">Abstract</div>
-      In this talk, I will first briefly overview the efforts in creating linguistically oriented benchmarks in Chinese. I will discuss the design and construction of benchmarks targeting the orthography, phonology, syntax, logic and semantics, pragmatics and world knowledge of modern and classical Chinese, by our lab and other teams in the field. The evaluations of baby and large language models show that current LLMs are very powerful, especially with the addition of “reasoning” abilities. However, certain linguistic blind spots remain, and further refinement of evaluation tasks and methodologies is needed. Next, I will discuss ongoing studies in understanding the learning mechanisms of monolingual and bilingual language models involving Chinese. Finally, I will point out what the LM community might learn from the language acquisition community.
-    </div>
-    <li><span class="time">12:00-13:30&nbsp;</span><span class="title">Lunch</span></li>
-
-    <li><span class="time">13:30-15:00&nbsp;</span><span class="title">Poster Session</span></li>
-
-    <li><span class="time">15:00-15:30&nbsp;</span><span class="title">Break</span></li>
-
-    <li><span class="time">15:30-16:30&nbsp;</span><span class="title">Invited Talk 2: Yohei Oseki - Small Language Models through Insights from Human Language Acquisition</span></li>
-
-    
-    <div class="abstract static-abstract">
-    <div class="abstract-label">Abstract</div>
-    Large language models (LLMs) have achieved remarkable success, thanks to the rapid development of AI and machine/deep learning, and outperformed humans at various downstream tasks. However, those LLMs, despite their super-human performance, have been pointed out as not efficient in terms of training data, model parameters, and computational resources. In this talk, I propose small language models (SLMs) that efficiently learn natural language like humans, building on insights from human language acquisition. Specifically, SLMs are trained on developmentally plausible corpora like BabyLM Challenge via curriculum learning, batch learning, direct/indirect evidence, variation set, and critical period. The results suggest that inductive biases are essential to efficiently train SLMs, with scientific implications for human language acquisition, as well as engineering applications to edge AI and low-resource languages.
-    </div>
-
-    <li>
-      <span class="time">16:30-17:05&nbsp;</span>
-      <span class="title">
-        BabyLM Workshop Orals
-        <span class="papers">
-          <div class="paper-entry">
-            <span class="paper-title">Teacher Demonstrations in a BabyLM’s Zone of Proximal Development for Contingent Multi-Turn Interaction</span>
-            <span class="paper-authors">Suchir Salhan, Hongyi Gu, Donya Rooein, Diana Galvan-Sosa, Gabrielle Gaudeau, Andrew Caines, Zheng Yuan, Paula Buttery</span>
-          </div>
-          <div class="paper-entry">
-            <span class="paper-title">Are BabyLMs Deaf to Gricean Maxims? A Pragmatic Evaluation of Sample-Efficient Language Models</span>
-            <span class="paper-authors">Raha Askari, Sina Zarrieß, Özge Alacam, Judith Sieker</span>
-          </div>
-          <div class="paper-entry">
-            <span class="paper-title">Looking to Learn: Token-wise Dynamic Gating for Low-Resource Vision-Language Modelling</span>
-            <span class="paper-authors">Bianca-Mihaela Ganescu, Suchir Salhan, Andrew Caines, Paula Buttery</span>
-          </div>
-        </span>
-      </span>
-    </li>
-
-    <li><span class="time">17:05-17:15&nbsp;</span><span class="title">Awards and Closing Remarks</span></li>
-  </ul>
-</section> -->
-
-<style>
-  .schedule {
-  font-family: system-ui, sans-serif;
-}
-
-  .schedule h2 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #222;
-  }
-
-  .schedule-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .schedule-list li {
-    display: grid;
-    grid-template-columns: auto  1fr;
-    align-items: baseline;
-    gap: 1rem;
-    padding: 0.01rem 0; /* tightened spacing */
-    border: none !important; /* kill inherited borders */
-  }
-
-  .schedule-list li * {
-    border: none !important;           /* remove dotted or solid lines */
-    text-decoration: none !important;  /* remove link-style underlines */
-  }
-
-  .time {
-    font-weight: 500;
-    color: #666;
-    text-align: left;                 /* was right */
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
-  }
-  .paper-entry {
-  margin-bottom: 0.75rem; /* space between papers */
-}
-
-.paper-title {
-  display: block;
-  font-weight: 600;
-  color: #222;
-}
-
-.paper-authors {
-  display: block;
-  font-size: 0.9rem;
-  color: #555;
-  margin-left: 1rem; /* optional indent for visual hierarchy */
-}
-
-  .title {
-    color: #222;
-    font-weight: 500;
-    line-height: 1.35;
-  }
-
-  /* small, inline list of papers/authors without changing layout */
-  .papers {
-    display: block;
-    margin-top: 1rem;
-    font-weight: 400;
-    font-size: 0.92rem;
-    color: #444;
-  }
-
-  .schedule-list li:nth-child(5),
-  .schedule-list li:nth-child(6) {
-    background-color: #fafafa;
-  }
-  .schedule-list li.talk {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
-  padding: 0.6rem 0;
-  border-top: 1px solid #eee !important;
-}
-.slot {
-  display: grid;
-  gap: 0.35rem;
-}
-.slot-top {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 0.8rem;
-  align-items: baseline;
-}
-.slot-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .02em;
-  color: #555;
-  background: #f3f4f6;
-  border-radius: 999px;
-  padding: 0.15rem 0.5rem;
-}
-.speaker {
-  font-weight: 500;
-  color: #333;
-}
-.talk-title {
-  font-weight: 650;
-  color: #111;
-  line-height: 1.35;
-}
-.abstract {
-  border-left: 3px solid #e5e7eb;
-  padding-left: 0.8rem;
-}
-.abstract > summary {
-  cursor: pointer;
-  font-weight: 500;
-  color: #444;
-  list-style: none;
-}
-.abstract > summary::-webkit-details-marker { display: none; }
-.abstract > summary::after {
-  content: " ▾";
-  font-weight: 400;
-}
-.abstract[open] > summary::after { content: " ▴"; }
-.abstract p {
-  margin: 0.4rem 0 0;
-  color: #333;
-}
-@media (max-width: 1200px) {
-  .schedule-list li.talk { grid-template-columns: 1fr; }
-}
-
-
-  @media (max-width: 1200px) {
-    .schedule-list li {
-      grid-template-columns: 1fr;
-      gap: 0.2rem;
-      padding: 0.5rem 0;
-    }
-    .time { text-align: left; }
-  }
-  .static-abstract { border-left: 3px solid #e5e7eb; padding-left: .8rem; }
-.abstract-label { font-weight: 500; color: #444; margin-bottom: .25rem; }
-</style>
-
-
-<div class="footer">
+  <h4>
+    <a href="index.html">Overview</a> •
+    <a href="Workshop_times.html">Workshop Schedule</a> •
+    <a href="guidelines.html">Guidelines</a> •
+    <a href="timeline.html">Timeline</a> •
+    <a href="faqs.html">FAQs</a> •
+    <a href="papers.html">Previous Papers</a>
+    <hr>
+  </h4>
 </div>
 
+<main>
+  <h1 class="title" id="schedule-heading">BabyLM 4 at EMNLP 2026 — Tentative Workshop Schedule</h1>
+  <p id="schedule-note">This schedule is tentative and subject to change. Speaker names and presentation details will be announced.</p>
+
+  <table class="schedule-table" aria-labelledby="schedule-heading" aria-describedby="schedule-note schedule-timing-note">
+    <thead>
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Session</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><time datetime="09:00">09:00</time>–<time datetime="09:15">09:15</time></th>
+        <td>Opening Remarks</td>
+      </tr>
+      <tr>
+        <th scope="row"><time datetime="09:15">09:15</time>–<time datetime="10:15">10:15</time></th>
+        <td>Invited Talk 1</td>
+      </tr>
+      <tr>
+        <th scope="row"><time datetime="10:15">10:15</time>–<time datetime="11:00">11:00</time></th>
+        <td>Break</td>
+      </tr>
+      <tr>
+        <th scope="row"><time datetime="11:00">11:00</time>–<time datetime="12:00">12:00</time></th>
+        <td>Invited Talk 2</td>
+      </tr>
+      <tr>
+        <th scope="row"><time datetime="12:00">12:00</time>–<time datetime="12:30">12:30</time></th>
+        <td>BabyLM Orals pt 1</td>
+      </tr>
+      <tr>
+        <th scope="row"><time datetime="12:30">12:30</time>–<time datetime="14:00">14:00</time></th>
+        <td>Lunch</td>
+      </tr>
+      <tr>
+        <th scope="row"><time datetime="14:00">14:00</time>–<time datetime="15:30">15:30</time></th>
+        <td>Poster Session</td>
+      </tr>
+      <tr>
+        <th scope="row"><time datetime="15:30">15:30</time>–<time datetime="16:00">16:00</time></th>
+        <td>Break</td>
+      </tr>
+      <tr>
+        <th scope="row"><time datetime="16:00">16:00</time>–<time datetime="17:30">17:30</time></th>
+        <td>BabyLM Orals pt 2</td>
+      </tr>
+      <tr>
+        <th scope="row"><time datetime="16:30">16:30</time>–<time datetime="17:05">17:05</time></th>
+        <td>Town Hall</td>
+      </tr>
+      <tr>
+        <th scope="row"><time datetime="17:05">17:05</time>–<time datetime="17:15">17:15</time></th>
+        <td>Awards and Closing Remarks</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p id="schedule-timing-note" class="schedule-note"><strong>Timing to be confirmed:</strong> BabyLM Orals pt 2 is currently listed as 16:00–17:30, which overlaps with the town hall and closing remarks. The afternoon timings will be updated once confirmed.</p>
+</main>
+
+<div class="footer"></div>
 
 </body>
-
+</html>
