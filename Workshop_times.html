@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BabyLM 4 at EMNLP 2026 - Tentative Workshop Schedule</title>
+  <title>BabyLM 4 at EMNLP 2026 - Workshop Schedule</title>
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="icon" href="./images/pacifier.png">
 
@@ -38,17 +39,39 @@
       background-color: #f5f5f5;
       border-left: 3px solid #0066ff;
     }
+
+    .talk-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    .talk-list li {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .talk-time {
+      font-variant-numeric: tabular-nums;
+      font-weight: 500;
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+
+    .invited-talk {
+      margin-top: 6px;
+      line-height: 1.5;
+    }
   </style>
 </head>
 
 <body>
 
 <div style="display:inline">
- <img style="float: left; padding-right: 20px;" src="./images/pacifier.png" height="80"> 
- <div class="master-title"> <b>Baby</b>LM Challenge </div> 
- <div class="subheader"> Sample-efficient pretraining on a developmentally plausible corpus </div> 
+  <img style="float: left; padding-right: 20px;" src="./images/pacifier.png" height="80">
+  <div class="master-title"><b>Baby</b>LM Challenge</div>
+  <div class="subheader">Sample-efficient pretraining on a developmentally plausible corpus</div>
 </div>
-
 
 <div id="navbar">
   <h4>
@@ -63,10 +86,10 @@
 </div>
 
 <main>
-  <h1 class="title" id="schedule-heading">BabyLM 4 at EMNLP 2026 - Tentative Workshop Schedule</h1>
-  <p id="schedule-note">This schedule is tentative and subject to change. We will announce speaker names and presentation details.</p>
+  <h1 class="title" id="schedule-heading">BabyLM 4 at EMNLP 2026 - Workshop Schedule</h1>
+  <p id="schedule-note">October 29, 2026 | Room F4-5 | Budapest, Hungary. All times are in Budapest local time (CET, UTC+1). The schedule is subject to change.</p>
 
-  <table class="schedule-table" aria-labelledby="schedule-heading" aria-describedby="schedule-note schedule-timing-note">
+  <table class="schedule-table" aria-labelledby="schedule-heading" aria-describedby="schedule-note">
     <thead>
       <tr>
         <th scope="col">Time</th>
@@ -75,48 +98,74 @@
     </thead>
     <tbody>
       <tr>
-        <th scope="row"><time datetime="09:15">09:15</time>-<time datetime="09:30">09:30</time></th>
+        <th scope="row"><time datetime="09:15">09:15</time> - <time datetime="09:30">09:30</time></th>
         <td>Opening Remarks</td>
       </tr>
       <tr>
-        <th scope="row"><time datetime="09:30">09:30</time>-<time datetime="10:30">10:30</time></th>
-        <td>BabyLM Orals pt 1</td>
+        <th scope="row"><time datetime="09:30">09:30</time> - <time datetime="10:30">10:30</time></th>
+        <td>
+          <strong>BabyLM Orals pt 1</strong>
+          <ul class="talk-list">
+            <li><span class="talk-time">09:30 - 09:45</span> <em>BabySteps at BabyLM 2026: Stronger Optimization and Causal Baselines for Data-Constrained Pretraining</em></li>
+            <li><span class="talk-time">09:45 - 10:00</span> <em>Qwenfant: Train Big Character-level BabyLMs on Concise Parallel Text</em></li>
+            <li><span class="talk-time">10:00 - 10:15</span> <em>Recursive Transformers for BabyLM 2026</em></li>
+            <li><span class="talk-time">10:15 - 10:30</span> <em>Miss Universal Grammar: Pretraining BabyLMs with Linguistic and Non-Linguistic Sources</em></li>
+          </ul>
+        </td>
       </tr>
       <tr>
-        <th scope="row"><time datetime="10:30">10:30</time>-<time datetime="11:00">11:00</time></th>
+        <th scope="row"><time datetime="10:30">10:30</time> - <time datetime="11:00">11:00</time></th>
         <td>Break</td>
       </tr>
       <tr>
-        <th scope="row"><time datetime="11:00">11:00</time>-<time datetime="12:00">12:00</time></th>
-        <td>Invited Talk 1</td>
+        <th scope="row"><time datetime="11:00">11:00</time> - <time datetime="12:00">12:00</time></th>
+        <td>
+          <strong>Invited Talk 1</strong>
+          <div class="invited-talk">
+            <strong>Mitja Nikolaus</strong> (CNRS, Toulouse)
+            <div><em>Communicative Feedback: Language Acquisition Within and Through Social Interaction</em></div>
+          </div>
+        </td>
       </tr>
       <tr>
-        <th scope="row"><time datetime="12:00">12:00</time>-<time datetime="12:30">12:30</time></th>
-        <td>BabyLM Orals pt 2</td>
+        <th scope="row"><time datetime="12:00">12:00</time> - <time datetime="12:30">12:30</time></th>
+        <td>
+          <strong>BabyLM Orals pt 2</strong>
+          <ul class="talk-list">
+            <li><span class="talk-time">12:00 - 12:15</span> <em>Relational Attention for Data-Efficient Language Modeling</em></li>
+            <li><span class="talk-time">12:15 - 12:30</span> <em>TinyLibrary: Do Age-Graded Curricula Help Small Vision-Language Models?</em></li>
+          </ul>
+        </td>
       </tr>
       <tr>
-        <th scope="row"><time datetime="12:30">12:30</time>-<time datetime="14:00">14:00</time></th>
+        <th scope="row"><time datetime="12:30">12:30</time> - <time datetime="14:00">14:00</time></th>
         <td>Lunch</td>
       </tr>
       <tr>
-        <th scope="row"><time datetime="14:00">14:00</time>-<time datetime="15:30">15:30</time></th>
+        <th scope="row"><time datetime="14:00">14:00</time> - <time datetime="15:30">15:30</time></th>
         <td>Poster Session</td>
       </tr>
       <tr>
-        <th scope="row"><time datetime="15:30">15:30</time>-<time datetime="16:00">16:00</time></th>
+        <th scope="row"><time datetime="15:30">15:30</time> - <time datetime="16:00">16:00</time></th>
         <td>Break</td>
       </tr>
       <tr>
-        <th scope="row"><time datetime="16:00">16:00</time>-<time datetime="17:00">17:00</time></th>
-        <td>Invited Talk 2</td>
+        <th scope="row"><time datetime="16:00">16:00</time> - <time datetime="17:00">17:00</time></th>
+        <td>
+          <strong>Invited Talk 2</strong>
+          <div class="invited-talk">
+            <strong>Pontus Stenetorp</strong> (University College London)
+            <div><em>UK-LLM, Sofair, and a path towards frontier-level Open Source Artificial Intelligence</em></div>
+          </div>
+        </td>
       </tr>
       <tr>
-        <th scope="row"><time datetime="17:00">17:00</time>-<time datetime="17:25">17:25</time></th>
+        <th scope="row"><time datetime="17:00">17:00</time> - <time datetime="17:25">17:25</time></th>
         <td>Town Hall</td>
       </tr>
       <tr>
-        <th scope="row"><time datetime="17:25">17:25</time>-<time datetime="17:30">17:30</time></th>
-        <td>Awards and Closing Remarks</td>
+        <th scope="row"><time datetime="17:25">17:25</time> - <time datetime="17:30">17:30</time></th>
+        <td>Closing Remarks</td>
       </tr>
     </tbody>
   </table>
